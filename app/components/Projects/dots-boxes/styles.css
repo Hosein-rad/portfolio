@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+}
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 95dvh;
+  background-color: #000;
+} */
+
+h1 {
+  color: darkgray;
+  font-size: 60px;
+  position: absolute;
+  top: 10px;
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.welcome {
+  border-radius: 30px;
+  background-color: antiquewhite;
+  padding: 0 50px 20px;
+}
+
+/* .flex {
+  display: flex;
+} */
+
+/* .btns {
+  display: flex;
+  padding-bottom: 10px;
+  gap: 30px;
+  justify-content: center;
+} */
+
+/* .choicebtn {
+  font-weight: bolder;
+  background-color: bisque;
+  border-radius: 10px;
+  padding: 10px;
+  border-color: #fff;
+} */
+
+/* .container {
+  margin-top: 30px;
+  width: fit-content;
+  height: fit-content;
+  background-color: slategrey;
+  border-radius: 20px;
+} */
+
+/* .grid5 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 20px;
+} */
+
+/* .dotbtn {
+  background-color: #000;
+  margin: 20px;
+  text-align: center;
+  border: none;
+  font-size: xx-large;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+} */
+/* 
+.linesDivX {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-row-gap: 60px;
+  grid-column-gap: 5px;
+  margin: 20px;
+} */
+
+/* .linesDivY {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-row-gap: 5px;
+  grid-column-gap: 60px;
+  margin: 20px;
+} */
+
+/* .linesX {
+  margin-left: 15px;
+  background-color: unset;
+  width: 50px;
+  height: 10px;
+  border-radius: 20px;
+  z-index: 10;
+} */
+
+/* .linesY {
+  margin-top: 15px;
+  background-color: unset;
+  width: 10px;
+  height: 50px;
+  border-radius: 20px;
+  z-index: 10;
+} */
+
+.linesX:hover {
+  cursor: pointer;
+  background-color: #000;
+}
+
+.linesY:hover {
+  cursor: pointer;
+  background-color: #000;
+}
+
+/* .boxesDiv {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  margin: 25px;
+} */
+
+/* .boxes {
+  margin: 10px;
+  background-color: unset;
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  z-index: 10;
+} */
+
+/* .winMsg {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* .winner {
+  width: fit-content;
+  background-color: rgb(50, 150, 50, 0.6);
+  border-radius: 90%;
+  padding: 40px;
+  margin: 10px 0 10px 0;
+  text-align: center;
+  font-size: 4rem;
+  color: white;
+} */
+
+/* .p1point {
+  text-decoration: underline;
+  text-align: center;
+  font-size: xx-large;
+  color: rgb(151, 151, 255);
+} */
+/* 
+.p2point {
+  text-decoration: underline;
+  text-align: center;
+  font-size: xx-large;
+  color: rgb(255, 147, 147);
+} */
