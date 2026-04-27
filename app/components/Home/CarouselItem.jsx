@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 const CarouselItem = () => {
@@ -26,14 +28,12 @@ const CarouselItem = () => {
               alt={item.name}
               src={item?.url}
               width={40}
-              height={50}
-              className=" mx-[1.5em] rounded-md z-100"
-              // onMouseEnter={() => setSkillName(() => `${item.name}`)}
+              height={40}
+              className="size-7 md:size-10 mx-3 md:mx-[1.5em] rounded-md z-100"
             />
-
-            <div className="absolute inset-0 left-1 -mt-6 size-20 text-center text-black dark:text-white opacity-0 hover:opacity-100 duration-300 z-110">
+            <button className="absolute flex justify-center inset-0 -left-4 md:left-1 -mt-6 size-20 md:size-20 text-center text-black dark:text-white opacity-0 hover:opacity-100 focus:opacity-100 duration-300 z-110">
               {item.name}
-            </div>
+            </button>
           </div>
         );
       })}

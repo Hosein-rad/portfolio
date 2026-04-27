@@ -6,7 +6,7 @@ function Language() {
   const [language, setLanguage] = useState("Eng");
   return (
     <>
-      <div className="my-auto mx-2 bg-white border border-white text-black text-sm size-11 text-center rounded-full duration-500">
+      <div className="my-auto md:mx-2 bg-white border border-white text-black text-xs md:text-sm size-8 md:size-11 text-center rounded-full duration-500">
         <div
           onClick={() => {
             setLanguage("Eng");

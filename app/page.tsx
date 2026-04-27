@@ -6,9 +6,9 @@ import Contact from "./components/Contact/Contact";
 
 export default function page() {
   return (
-    <body className="h-fit box-border font-['Baloo-regular'] bg-sky-200 dark:bg-sky-950 flex flex-col items-center justify-center">
+    <body className="min-h-screen h-fit font-['Baloo-regular'] bg-sky-200 dark:bg-sky-950 flex flex-col items-center justify-center">
       <Header />
-      <main className="w-19/20 -mt-10 rounded-t-[100px] border-white dark:border-black border-t-3 bg-stone-300 dark:bg-black">
+      <main className="w-19/20 -mt-6 md:-mt-10 md:rounded-t-[100px] border-white dark:border-black border-t-3 bg-stone-300 dark:bg-black">
         <Home />
         <Projects />
         <About />

@@ -21,7 +21,7 @@ const MiniProjects = () => {
     if (openDots || openCalc) {
       document.body.style.overflow = "clip";
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "visible";
     }
   }, [openDots, openCalc]);
 

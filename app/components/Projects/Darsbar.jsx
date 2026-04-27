@@ -1,20 +1,18 @@
-// import Image from "next/image";
-
 const Darsbar = () => {
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="h-fit mx-20 py-10 flex text-black dark:text-white">
-        <div className="text-right">
-          <h1 className="text-4xl">
+      <div className="h-fit mx-auto md:mx-20 py-10 flex flex-col md:flex-row text-black dark:text-white">
+        <div className="md:text-right">
+          <h1 className="pb-5 mx-10 md:pb-8 text-2xl md:text-4xl">
             <a
               target="_blank"
               href="https://www.darsbar.ir"
-              className="text-5xl hover:text-blue-700 dark:hover:text-blue-300 duration-200 animate-pulse hover:animate-none"
+              className="text-4xl md:text-5xl hover:text-blue-700 dark:hover:text-blue-300 duration-200 animate-pulse hover:animate-none"
             >
               Darsbar
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 inline -mt-8"
+                className="size-3 md:size-4 inline -mt-8"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -29,7 +27,7 @@ const Darsbar = () => {
             </a>
             : Student & Teacher Dashboard
           </h1>
-          <p className="pl-15 pt-5 text-justify">
+          <p className="mx-5 text-sm md:text-[16px] md:pl-15 text-justify">
             Darsbar is a comprehensive dashboard designed to streamline the
             study process for students and educators. This project facilitates
             user <u>sign-in and sign-up</u> for both students and teachers,
@@ -53,7 +51,7 @@ const Darsbar = () => {
             experience.
           </p>
         </div>
-        <div className="w-150 h-50 mx-10 flex justify-center items-center text-center border rounded-2xl bg-radial from-black to-transparent cursor-not-allowed">
+        <div className="md:w-150 md:mt-10 h-50 mx-10 hidden md:flex justify-center items-center text-center border rounded-2xl bg-radial from-black to-transparent cursor-not-allowed">
           <p className="text-red-300 text-xl">
             Not Available <br /> at the moment
           </p>

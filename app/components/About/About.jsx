@@ -32,7 +32,7 @@ const About = () => {
     if (openStory) {
       document.body.style.overflow = "clip";
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "visible";
     }
   }, [openStory]);
 
@@ -187,7 +187,7 @@ const About = () => {
         Who am I ?
       </h1>
 
-      <div className="flex justify-between flex-row-reverse w-4/5 overflow-hidden">
+      <div className="flex justify-between flex-col md:flex-row-reverse w-4/5 overflow-hidden">
         <div
           id="my-story"
           className="relative flex flex-col items-center justify-center duration-300 group"
@@ -245,9 +245,11 @@ const About = () => {
           a new tool, I learn it quickly. With{" "}
           <strong>professional fluency in English</strong>, I navigate
           documentations and technical resources with ease. <br />I have a
-          strong eye for <em className="text-green-800 dark:text-green-100">design</em> and{" "}
-          <em className="text-purple-900 dark:text-purple-100">detail</em>, and I genuinely enjoy
-          turning complicated layouts into smooth, working code.
+          strong eye for{" "}
+          <em className="text-green-800 dark:text-green-100">design</em> and{" "}
+          <em className="text-purple-900 dark:text-purple-100">detail</em>, and
+          I genuinely enjoy turning complicated layouts into smooth, working
+          code.
           <br /> While my current strength is front-end, I&apos;m very
           enthusiastic about roles that touch Python, C#, or Java on the
           backend. I want to grow into a <b>full-stack</b> mindset and would

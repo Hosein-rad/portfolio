@@ -12,7 +12,7 @@ const Indicator = () => {
       let newPosition;
 
       if (scrollY < 400) {
-        newPosition = "translate-x-39";
+        newPosition = "translate-x-11 md:translate-x-39";
       } else if (scrollY >= 450 && scrollY < 2050) {
         newPosition = "translate-x-85";
       } else if (scrollY >= 2050 && scrollY < 2500) {
@@ -21,12 +21,9 @@ const Indicator = () => {
         newPosition = "translate-x-176.5";
       }
 
-      // Only touch the DOM if the position actually changed
       if (newPosition !== currentPosition.current) {
         const el = indicatorRef.current;
-        // Remove old position class
         el.classList.remove(currentPosition.current);
-        // Add new position class
         el.classList.add(newPosition);
         currentPosition.current = newPosition;
       }
@@ -39,7 +36,7 @@ const Indicator = () => {
   return (
     <div
       ref={indicatorRef}
-      className="absolute translate-x-39 rounded-[100%] w-25 h-12 bg-white dark:bg-black z-11 duration-500"
+      className="absolute translate-x-11 md:translate-x-39 rounded-[100%] w-11 h-7 md:w-25 md:h-12 bg-white dark:bg-black z-11 duration-500"
     ></div>
   );
 };

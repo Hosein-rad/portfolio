@@ -1,27 +1,32 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 const Cryptionary = () => {
+  const [moreText, setMoreText] = useState(false);
+
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="h-fit mx-20 pt-10 flex text-black dark:text-white">
+      <div className="h-fit m mx-6 md:mx-20 pt-10 flex flex-col-reverse md:flex-row text-black dark:text-white">
         <Image
           src={"/images/cryptionary.webp"}
           alt="Cryptionary"
           width={600}
           height={300}
-          className="mx-10 size-fit hover:scale-120 duration-500 cursor-zoom-in"
+          className="mt-3 md:mt-0 mx-auto md:mx-10 size-fit hover:scale-110 duration-500"
         />
         <div>
-          <h1 className="pb-8 text-4xl">
+          <h1 className="w-70 pb-5 ml-3 md:pb-8 text-2xl md:text-4xl">
             <a
               target="_blank"
               href="https://www.cryptionary.ir"
-              className="text-5xl hover:text-blue-700 dark:hover:text-blue-300 duration-200 animate-pulse hover:animate-none"
+              className="text-4xl md:text-5xl hover:text-blue-700 dark:hover:text-blue-300 duration-200 animate-pulse hover:animate-none"
             >
               Cryptionary
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 inline -mt-8"
+                className="size-3 md:size-4 inline -mt-8"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -34,9 +39,11 @@ const Cryptionary = () => {
                 <path d="M10 14 21 3" />
               </svg>
             </a>
-            : Real-time Cryptocurrency Dashboard
+            : <br className="md:hidden" />
+            <span className="hidden md:inline">Real-time</span> Cryptocurrency
+            Dashboard
           </h1>
-          <p className="pr-10 text-justify">
+          <p className="text-sm md:text-[16px] md:pr-10 text-justify">
             This project is a dynamic cryptocurrency tracking website developed
             using{" "}
             <u>
@@ -51,30 +58,51 @@ const Cryptionary = () => {
           </p>
         </div>
       </div>
-      <div className="h-fit mx-30 pb-5 flex flex-col text-black dark:text-white">
-        <p className="pt-4 font-bold">Key Features & Technologies :</p>
-        <ul className="pt-2 pl-10 list-disc text-justify">
-          <li>
-            <b>Data Integration</b> : Leverages <b>API</b>s from reputable
-            sources like CoinGecko and Coinpaprika to fetch real-time
-            cryptocurrency data, including prices, market capitalization, and
-            trading volumes.
-          </li>
-          <li>
-            <b>Interactive UI/UX</b> : Implements engaging user interface
-            elements such as <i>animated gradient transitions</i>, a captivating
-            hover effect with <i>mouse tracking text</i>, and a smooth
-            <i>sliding sidebar</i> for enhanced navigation and user experience.
-          </li>
-          <li>
-            <b>Resilience in Restricted Environments</b> : Designed to function
-            effectively despite potential internet sanctions. To demonstrate
-            full functionality, <u>static data</u> is utilized, ensuring all
-            features are showcased even when live data fetching is not feasible.
-          </li>
-        </ul>
+      <div className="h-fit w-3/4 md:w-full mx-10 md:mx-30 pb-5 flex flex-col text-black dark:text-white">
+        <div
+          onClick={() => setMoreText(() => !moreText)}
+          className="w-2/3 md:w-fit ml-5 flex items-center justify-between cursor-pointer hover:underline rounded-2xl"
+        >
+          <p className="w-fit pt-4 md:ml-20 font-bold text-nowrap">
+            Key Features & Technologies :
+          </p>
+          <Image
+            src="/svgs/arrow-l.svg"
+            alt="arrow"
+            width={40}
+            height={40}
+            className={`p-1 pr-1.5 mx-5 mt-3 ${
+              moreText ? "rotate-90" : "-rotate-90"
+            } size-5 bg-white rounded-full duration-300`}
+          />
+        </div>
+        {moreText && (
+          <ul className="pt-2 mx-4 pl-5 md:pl-10 md:mx-20 list-disc text-sm md:text-[16px]">
+            <li>
+              <b>Data Integration</b> : Leverages <b>API</b>s from reputable
+              sources like CoinGecko and Coinpaprika to fetch real-time
+              cryptocurrency data, including prices, market capitalization, and
+              trading volumes.
+            </li>
+            <li>
+              <b>Interactive UI/UX</b> : Implements engaging user interface
+              elements such as <i>animated gradient transitions</i>, a
+              captivating hover effect with <i>mouse tracking text</i>, and a
+              smooth
+              <i>sliding sidebar</i> for enhanced navigation and user
+              experience.
+            </li>
+            <li>
+              <b>Resilience in Restricted Environments</b> : Designed to
+              function effectively despite potential internet sanctions. To
+              demonstrate full functionality, <u>static data</u> is utilized,
+              ensuring all features are showcased even when live data fetching
+              is not feasible.
+            </li>
+          </ul>
+        )}
       </div>
-      <div className="w-4/5 border-white dark:border-black border-b-6 border-dotted mask-x-from-50%"></div>
+      <div className="w-full border-white dark:border-black border-b-6 border-dotted mask-x-from-70%"></div>
     </div>
   );
 };

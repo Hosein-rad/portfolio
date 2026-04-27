@@ -1,22 +1,28 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 const Leekoo = () => {
+  const [moreText, setMoreText] = useState(false);
+
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="h-fit mx-20 pt-10 flex text-black dark:text-white">
+      <div className="h-fit mx-auto md:mx-20 pt-10 flex flex-col-reverse md:flex-row text-black dark:text-white">
         <Image
           src={"/images/leekoo1.webp"}
           alt="Cryptionary"
           width={600}
           height={300}
-          className="mx-10 size-fit hover:scale-120 duration-500 cursor-zoom-in"
+          className="mx-auto my-4 md:mx-10 size-fit hover:scale-110 duration-500"
         />
+
         <div>
-          <h1 className="pb-6 text-4xl">
+          <h1 className="pb-6 text-2xl md:text-4xl mx-10">
             <a
               target="_blank"
               href="https://www.leekoo.ir"
-              className="text-5xl hover:text-blue-700 dark:hover:text-blue-300 duration-200 animate-pulse hover:animate-none"
+              className="text-4xl md:text-5xl hover:text-blue-700 dark:hover:text-blue-300 duration-200 animate-pulse hover:animate-none"
             >
               Leekoo
               <svg
@@ -34,14 +40,14 @@ const Leekoo = () => {
                 <path d="M10 14 21 3" />
               </svg>
             </a>
-            : children and teenagers&apos; care center
+            : children & teenagers&apos; care center
           </h1>
-          <p className="pr-10 text-justify">
+          <p className="mx-5 md:pr-10 text-justify">
             This project involved the development of a{" "}
             <u>
               <b>WordPress</b>
             </u>{" "}
-            website for an educational/entertainment center dedicated to
+            website for an educational/ entertainment center dedicated to
             children and teenagers. The site features a dynamic <b>gallery</b>,
             a dedicated section for <b>courses</b>, an integrated online{" "}
             <b>store</b>, and an{" "}
@@ -50,24 +56,42 @@ const Leekoo = () => {
           </p>
         </div>
       </div>
-      <div className="h-fit mx-30 pb-5 -mt-3 flex flex-col text-black dark:text-white">
-        <p className="font-bold">Key Features & Technologies :</p>
-        <ul className="pt-2 pl-10 list-disc text-justify">
-          <li>
-            Collaborated directly with the client to gather requirements and
-            ensure project alignment with their objectives, resulting in{" "}
-            <b>strong client satisfaction</b>.
-          </li>
-          <li>
-            Managed extensive <u>content creation</u> and <u>editing</u>,
-            ensuring accuracy, engagement, and brand consistency.
-          </li>
-          <li>
-            Leveraged <b>JetEngine, ElementorPro, WooCommerce</b> plug-in and
-            much more, to build interactive elements and customize the user
-            experience for an engaging website.
-          </li>
-        </ul>
+      <div className="h-fit w-3/4 md:w-full mx-10 md:mx-30 pb-5 flex flex-col text-black dark:text-white">
+        <div
+          onClick={() => setMoreText(() => !moreText)}
+          className="w-2/3 md:w-fit ml-5 flex items-center justify-between cursor-pointer hover:underline rounded-2xl"
+        >
+          <p className="w-fit pt-4 md:ml-20 font-bold text-nowrap">
+            Key Features & Technologies :
+          </p>
+          <Image
+            src="/svgs/arrow-l.svg"
+            alt="arrow"
+            width={40}
+            height={40}
+            className={`p-1 pr-1.5 mx-5 mt-3 ${
+              moreText ? "rotate-90" : "-rotate-90"
+            } size-5 bg-white rounded-full duration-300`}
+          />
+        </div>
+        {moreText && (
+          <ul className="pt-2 mx-5 pl-5 md:pl-10 md:mx-20 list-disc text-sm md:text-[16px]">
+            <li>
+              Collaborated directly with the client to gather requirements and
+              ensure project alignment with their objectives, resulting in{" "}
+              <b>strong client satisfaction</b>.
+            </li>
+            <li>
+              Managed extensive <u>content creation</u> and <u>editing</u>,
+              ensuring accuracy, engagement, and brand consistency.
+            </li>
+            <li>
+              Leveraged <b>JetEngine, ElementorPro, WooCommerce</b> plug-in and
+              much more, to build interactive elements and customize the user
+              experience for an engaging website.
+            </li>
+          </ul>
+        )}
       </div>
       <div className="w-4/5 border-white dark:border-black border-b-6 border-dotted mask-x-from-50%"></div>
     </div>
