@@ -39,16 +39,16 @@ const About = () => {
   return (
     <div
       id="about"
-      className="h-fit pt-25 bg-sky-200 dark:bg-sky-950 flex flex-col items-center text-black dark:text-white"
+      className="h-fit pt-15 md:pt-25 bg-sky-200 dark:bg-sky-950 flex flex-col items-center text-black dark:text-white"
     >
       {openStory && (
         <div
           id="dots-boxes"
           onClick={handleOverlayClick}
-          className="absolute -mt-100 -left-20 w-[150dvw] h-[300dvh] backdrop-blur-3xl z-100 duration-300"
+          className="absolute -mt-100 md:-left-20 w-screen h-[300dvh] md:w-[150dvw] md:h-[300dvh] backdrop-blur-3xl z-100 duration-300"
         >
           {createPortal(
-            <div className="fixed h-full top-0 left-0 mx-40 flex flex-col items-end rounded-4xl border backdrop-brightness-20 text-white z-101 animate-open-portal origin-[90%_50%] leading-relaxed">
+            <div className="fixed h-full top-0 left-0 mx-5 md:mx-40 flex flex-col items-end rounded-4xl border backdrop-brightness-20 text-white z-101 animate-open-portal origin-center md:origin-[90%_50%] leading-relaxed">
               <div className="w-full flex justify-end border-b bg-black/90 rounded-t-4xl z-101">
                 <Image
                   src="/svgs/close.svg"
@@ -59,7 +59,7 @@ const About = () => {
                   onClick={() => setOpenStory(() => false)}
                 />
               </div>
-              <p className="h-140 px-5 mx-10 -mt-15 -mb-15 py-20 text-justify overflow-y-scroll scroll-hidden z-100">
+              <p className="h-140 px-5 md:mx-10 -mt-15 -mb-15 py-20 text-justify text-sm md:text-[16px] overflow-y-scroll scroll-hidden z-100">
                 I&apos;m a 28 year-old English teacher. I entered the classroom
                 for one simple reason: <strong>passion</strong>. I genuinely
                 wanted to <em>shape minds and make a difference</em>. But after
@@ -183,11 +183,11 @@ const About = () => {
           )}
         </div>
       )}
-      <h1 className="w-fit px-20 py-5 text-black dark:text-white text-center text-6xl border-white dark:border-black border-b-4 mask-x-from-85%">
+      <h1 className="w-fit px-20 py-5 text-black dark:text-white text-center text-4xl md:text-6xl border-white dark:border-black border-b-4 mask-x-from-85%">
         Who am I ?
       </h1>
 
-      <div className="flex justify-between flex-col md:flex-row-reverse w-4/5 overflow-hidden">
+      <div className="flex justify-between flex-col md:flex-row-reverse w-full md:w-4/5 overflow-hidden">
         <div
           id="my-story"
           className="relative flex flex-col items-center justify-center duration-300 group"
@@ -224,46 +224,44 @@ const About = () => {
             My Story
           </button>
         </div>
-        <p className="w-[70%] mt-10 text-md text-justify">
-          <span className="block mb-4 text-lg text-center font-normal">
+        <p className="md:w-[70%] mt-5 md:mt-10">
+          <span className="w-full block mb-4 text-lg text-center font-normal">
             <span className="text-cyan-700 dark:text-cyan-200">
               Front-End Developer
             </span>{" "}
             |
-            <span className="text-fuchsia-700 dark:text-fuchsia-200">
+            <span className="text-fuchsia-700 dark:text-fuchsia-200 text-nowrap">
               {" "}
               2.5 Years Self-Taught
             </span>{" "}
-            |
-            <span className="text-amber-700 dark:text-amber-200">
+            <b className="hidden md:inline">|</b>
+            <span className="text-amber-700 dark:text-amber-200 text-nowrap">
               {" "}
               Ready to start immediately
             </span>
           </span>
           I&apos;m Hosein Rad. specialized in building clean, complex interfaces
-          and solving problems—if there&apos;s a bug, I find it. If there&apos;s
-          a new tool, I learn it quickly. With{" "}
+          and solving problems. With{" "}
           <strong>professional fluency in English</strong>, I navigate
           documentations and technical resources with ease. <br />I have a
           strong eye for{" "}
           <em className="text-green-800 dark:text-green-100">design</em> and{" "}
           <em className="text-purple-900 dark:text-purple-100">detail</em>, and
           I genuinely enjoy turning complicated layouts into smooth, working
-          code.
+          code, so much so, that I often lose track of time, working.
           <br /> While my current strength is front-end, I&apos;m very
           enthusiastic about roles that touch Python, C#, or Java on the
           backend. I want to grow into a <b>full-stack</b> mindset and would
-          welcome any exposure to those technologies.
-          <br /> I do my best work when I can lock in and focus deeply. I&apos;m
-          self-driven and used to delivering results
+          love any exposure to those areas.
+          <br /> I thrive in solitude. I&apos;m self-driven and comfortable
+          delivering results
           <strong className="text-gray-600 dark:text-gray-300">
             {" "}
             without someone looking over my shoulder
           </strong>
-          . I&apos;m not looking for just a paycheck—I&apos;m looking for a
-          place to contribute, provide value, solve real problems and move up
-          from Junior to Mid-level as efficiently as my output allows, and keep
-          climbing ...
+          .I&apos;m looking for a place to contribute, provide value, solve real
+          problems and move up from Junior to Mid-level with maximum efficiency,
+          and keep climbing ...
         </p>
       </div>
     </div>

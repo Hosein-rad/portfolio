@@ -39,7 +39,7 @@ const MiniProjects = () => {
         <div
           id="dots-boxes"
           onClick={handleOverlayClick}
-          className="absolute w-[97dvw] h-[300dvh] backdrop-blur-md scroll-[none] z-100 duration-500"
+          className="absolute w-dvw md:w-[97dvw] h-[300dvh] backdrop-blur-md scroll-[none] z-100 duration-500"
         >
           {createPortal(
             <div className="fixed inset-y-7 inset-x-auto size-fit flex flex-col items-center rounded-4xl border backdrop-brightness-40 text-white z-101 animate-open-portal">
@@ -68,7 +68,7 @@ const MiniProjects = () => {
         <div
           id="dots-boxes"
           onClick={handleOverlayClick}
-          className="absolute w-[97dvw] h-[300dvh] backdrop-blur-md scroll-[none] z-100 duration-500"
+          className="absolute w-dvw md:w-[97dvw] h-[300dvh] backdrop-blur-md scroll-[none] z-100 duration-500"
         >
           {createPortal(
             <div className="fixed inset-y-2 inset-x-auto size-fit flex flex-col items-center rounded-4xl border backdrop-brightness-40 text-white z-101 animate-open-portal origin-left">
@@ -103,10 +103,10 @@ const MiniProjects = () => {
           alt="a calculator icon in svg"
           width={150}
           height={100}
-          className="rounded-2xl mask-x-from-80% mask-y-from-90%"
+          className="rounded-2xl mask-x-from-80% mask-y-from-90% "
         />
-        <h3>Calculator</h3>
-        <p>(3 days)</p>
+        <h3 className="text-center">Mini Calculator</h3>
+        <p className="text-sm">(3 days)</p>
         <div className="absolute size-full inset-0 flex justify-center opacity-0 hover:opacity-100 backdrop-brightness-70 rounded-2xl duration-500">
           <Image
             src="/svgs/play.svg"
@@ -128,8 +128,8 @@ const MiniProjects = () => {
           height={100}
           className="m-2 mb-4 rounded-2xl"
         />
-        <h3>Dots & Boxes</h3>
-        <p>(2 days)</p>
+        <h3 className="text-center">Dots & Boxes</h3>
+        <p className="text-sm">(2 days)</p>
         <div className="absolute size-full inset-0 flex justify-center opacity-0 hover:opacity-100 backdrop-brightness-70 rounded-2xl duration-500">
           <Image
             src="/svgs/play.svg"
@@ -152,8 +152,8 @@ const MiniProjects = () => {
           height={150}
           className="m-2 mb-4 rounded-2xl"
         />
-        <h3>Everything else ...</h3>
-        <p>(day 1)</p>
+        <h3 className="text-center">Everything else ...</h3>
+        <p className="text-sm">(day 1)</p>
         <div className="absolute size-full inset-0 flex justify-center opacity-0 hover:opacity-100 backdrop-brightness-70 rounded-2xl duration-500">
           <Image
             src="/svgs/openLink.svg"
