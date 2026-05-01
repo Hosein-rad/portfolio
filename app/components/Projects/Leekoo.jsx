@@ -7,7 +7,7 @@ const Leekoo = () => {
   const [moreText, setMoreText] = useState(false);
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col justify-center">
       <div className="h-fit mx-auto md:mx-20 pt-10 flex flex-col-reverse md:flex-row text-black dark:text-white">
         <Image
           src={"/images/leekoo1.webp"}
@@ -42,7 +42,7 @@ const Leekoo = () => {
             </a>
             : children & teenagers&apos; care center
           </h1>
-          <p className="mx-5 md:pr-10 text-justify">
+          <p className="mx-5 md:w-110 text-justify">
             This project involved the development of a{" "}
             <u>
               <b>WordPress</b>
@@ -56,12 +56,12 @@ const Leekoo = () => {
           </p>
         </div>
       </div>
-      <div className="h-fit w-3/4 md:w-full mx-10 md:mx-30 pb-5 flex flex-col text-black dark:text-white">
+      <div className="h-fit mx-3 md:mx-30 pb-5 flex flex-col text-black dark:text-white">
         <div
           onClick={() => setMoreText(() => !moreText)}
-          className="w-2/3 md:w-fit ml-5 flex items-center justify-between cursor-pointer hover:underline rounded-2xl"
+          className="md:w-fit ml-5 flex items-center justify-between cursor-pointer hover:underline rounded-2xl"
         >
-          <p className="w-fit pt-4 md:ml-20 font-bold text-nowrap">
+          <p className="pt-4 md:ml-20 font-bold text-nowrap">
             Key Features & Technologies :
           </p>
           <Image

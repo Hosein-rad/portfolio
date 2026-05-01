@@ -4,28 +4,27 @@ import { useEffect, useRef } from "react";
 
 const Indicator = () => {
   const indicatorRef = useRef(null);
-  const currentPosition = useRef("translate-x-42");
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      let newPosition;
+      const scrollPercent =
+        window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      console.log(scrollPercent);
 
-      if (scrollY < 400) {
-        newPosition = "translate-x-11 md:translate-x-39";
-      } else if (scrollY >= 450 && scrollY < 2050) {
-        newPosition = "translate-x-85";
-      } else if (scrollY >= 2050 && scrollY < 2500) {
-        newPosition = "translate-x-131";
-      } else {
-        newPosition = "translate-x-176.5";
-      }
-
-      if (newPosition !== currentPosition.current) {
-        const el = indicatorRef.current;
-        el.classList.remove(currentPosition.current);
-        el.classList.add(newPosition);
-        currentPosition.current = newPosition;
+      if (indicatorRef.current) {
+        if (scrollPercent < 0.09) {
+          indicatorRef.current.className =
+            "absolute translate-x-12.5 md:translate-x-43.5 rounded-[100%] w-13 h-7 md:w-25 md:h-12 bg-white dark:bg-black z-11 duration-500";
+        } else if (scrollPercent >= 0.09 && scrollPercent < 0.7) {
+          indicatorRef.current.className =
+            "absolute translate-x-28.5 md:translate-x-94 rounded-[100%] w-13 h-7 md:w-25 md:h-12 bg-white dark:bg-black z-11 duration-500";
+        } else if (scrollPercent >= 0.7 && scrollPercent < 0.93) {
+          indicatorRef.current.className =
+            "absolute translate-x-45 md:translate-x-146 rounded-[100%] w-13 h-7 md:w-25 md:h-12 bg-white dark:bg-black z-11 duration-500";
+        } else if (scrollPercent > 0.95) {
+          indicatorRef.current.className =
+            "absolute translate-x-61 md:translate-x-196 rounded-[100%] w-13 h-7 md:w-25 md:h-12 bg-white dark:bg-black z-11 duration-500";
+        }
       }
     };
 
@@ -36,7 +35,7 @@ const Indicator = () => {
   return (
     <div
       ref={indicatorRef}
-      className="absolute translate-x-11 md:translate-x-39 rounded-[100%] w-11 h-7 md:w-25 md:h-12 bg-white dark:bg-black z-11 duration-500"
+      className="absolute translate-x-12.5 md:translate-x-43.5 rounded-[100%] w-13 h-7 md:w-25 md:h-12 bg-white dark:bg-black z-11 duration-500"
     ></div>
   );
 };

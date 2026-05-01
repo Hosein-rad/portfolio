@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="h-fit w-full pb-50 md:pb-5 pt-15 md:pt-25 flex flex-col items-center justify-center text-black dark:text-white bg-linear-to-b from-sky-200 to-stone-300 dark:from-sky-950 dark:to-black"
+      className="h-150 md:h-fit w-full pb-5 pt-15 md:pt-25 flex flex-col items-center justify-center text-black dark:text-white bg-linear-to-b from-sky-200 to-stone-300 dark:from-sky-950 dark:to-black"
     >
       <h1 className="w-fit px-10 md:px-20 py-2 text-black dark:text-white text-center text-3xl md:text-5xl border-white dark:border-black border-b-4 mask-x-from-85%">
         Let&apos;s Get in Touch
@@ -12,13 +12,13 @@ const Contact = () => {
 
       <div className="my-5 flex items-center justify-center">
         {/* phone number */}
-        <div className="my-4 flex flex-row">
+        <div className="my-4 flex flex-col md:flex-row items-center">
           <Image
             src="/svgs/call.svg"
             alt="phone svg"
             width={30}
             height={30}
-            className="mx-2"
+            className="mb-3 md:mb-0 md:mx-2"
           />
           {/* <p className="mx-2">phone number:</p> */}
           <p className="mx-2 pt-1">+98 936 742 8246</p>

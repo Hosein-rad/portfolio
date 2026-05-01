@@ -7,8 +7,8 @@ const Cryptionary = () => {
   const [moreText, setMoreText] = useState(false);
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="h-fit m mx-6 md:mx-20 pt-10 flex flex-col-reverse md:flex-row text-black dark:text-white">
+    <div className="flex flex-col justify-center">
+      <div className="h-fit mx-2 md:mx-20 pt-10 flex flex-col-reverse md:flex-row text-black dark:text-white">
         <Image
           src={"/images/cryptionary.webp"}
           alt="Cryptionary"
@@ -17,7 +17,8 @@ const Cryptionary = () => {
           className="mt-3 md:mt-0 mx-auto md:mx-10 size-fit hover:scale-110 duration-500"
         />
         <div>
-          <h1 className="w-70 pb-5 ml-3 md:pb-8 text-2xl md:text-4xl">
+          <h1 className="pb-6 text-2xl md:text-4xl mx-10">
+            {/* className="w-70 md:w-120 pb-5 ml-3 md:pb-8 text-2xl md:text-4xl" */}
             <a
               target="_blank"
               href="https://www.cryptionary.ir"
@@ -43,7 +44,7 @@ const Cryptionary = () => {
             <span className="hidden md:inline">Real-time</span> Cryptocurrency
             Dashboard
           </h1>
-          <p className="text-sm md:text-[16px] md:pr-10 text-justify">
+          <p className="mx-5 md:w-110">
             This project is a dynamic cryptocurrency tracking website developed
             using{" "}
             <u>
@@ -58,12 +59,12 @@ const Cryptionary = () => {
           </p>
         </div>
       </div>
-      <div className="h-fit w-3/4 md:w-full mx-10 md:mx-30 pb-5 flex flex-col text-black dark:text-white">
+      <div className="h-fit mx-3 md:mx-30 pb-5 flex flex-col text-black dark:text-white">
         <div
           onClick={() => setMoreText(() => !moreText)}
-          className="w-2/3 md:w-fit ml-5 flex items-center justify-between cursor-pointer hover:underline rounded-2xl"
+          className=" md:w-fit ml-5 flex items-center justify-between cursor-pointer hover:underline rounded-2xl"
         >
-          <p className="w-fit pt-4 md:ml-20 font-bold text-nowrap">
+          <p className="pt-4 md:ml-20 font-bold text-nowrap">
             Key Features & Technologies :
           </p>
           <Image
@@ -77,7 +78,7 @@ const Cryptionary = () => {
           />
         </div>
         {moreText && (
-          <ul className="pt-2 mx-4 pl-5 md:pl-10 md:mx-20 list-disc text-sm md:text-[16px]">
+          <ul className="pt-2 mx-5 pl-5 md:pl-10 md:mx-20 list-disc text-sm md:text-[16px]">
             <li>
               <b>Data Integration</b> : Leverages <b>API</b>s from reputable
               sources like CoinGecko and Coinpaprika to fetch real-time
@@ -102,7 +103,7 @@ const Cryptionary = () => {
           </ul>
         )}
       </div>
-      <div className="w-full border-white dark:border-black border-b-6 border-dotted mask-x-from-70%"></div>
+      <div className="w-4/5 border-white dark:border-black border-b-6 border-dotted mask-x-from-50%"></div>
     </div>
   );
 };

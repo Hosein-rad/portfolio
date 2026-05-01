@@ -1,6 +1,6 @@
 import DarkMode from "./DarkMode";
 import Language from "./Language";
-import Indicator from "./Indicator";
+// import Indicator from "./Indicator";
 
 const Header = () => {
   return (
