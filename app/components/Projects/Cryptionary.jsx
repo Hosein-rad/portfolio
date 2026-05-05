@@ -14,7 +14,7 @@ const Cryptionary = () => {
           alt="Cryptionary"
           width={600}
           height={300}
-          className="mt-3 md:mt-0 mx-auto md:mx-10 size-fit hover:scale-110 duration-500"
+          className="md:w-150 mt-3 md:mt-0 mx-auto md:mx-10 hover:scale-110 duration-500"
         />
         <div>
           <h1 className="pb-6 text-2xl md:text-4xl mx-10">

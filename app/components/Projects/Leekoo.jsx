@@ -14,7 +14,7 @@ const Leekoo = () => {
           alt="Cryptionary"
           width={600}
           height={300}
-          className="mx-auto my-4 md:mx-10 size-fit hover:scale-110 duration-500"
+          className="md:w-150 mx-auto my-4 md:mx-10 hover:scale-110 duration-500"
         />
 
         <div>

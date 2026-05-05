@@ -157,7 +157,7 @@ const About = () => {
                 <em className="text-red-200">removed</em> every single
                 distraction from my life— including people who mattered the
                 most. My world right now is very, very simple. It consists of
-                two things: my faith in <b>God</b>, and <b>my dream</b>.
+                one thing: <b>my dream</b>.
                 <br />
                 I&apos;ve proven I can endure the <em>silence</em>, the{" "}
                 <em>lack of reward</em>, and the crushing <em>self-doubt</em>{" "}
@@ -177,7 +177,7 @@ const About = () => {
                 show you what I&apos;m made of. <br /> That&apos;s my story. And
                 I can&apos;t wait to prove it.
               </p>
-              <div className="w-full h-15 flex border-t bg-black/90 rounded-b-4xl z-101"></div>
+              <div className="w-full h-[5em] flex border-t bg-black/90 rounded-b-4xl z-101"></div>
             </div>,
             document.getElementById("about")
           )}
@@ -249,11 +249,7 @@ const About = () => {
           <em className="text-purple-900 dark:text-purple-100">detail</em>, and
           I genuinely enjoy turning complicated layouts into smooth, working
           code, so much so, that I often lose track of time, working.
-          <br /> While my current strength is front-end, I&apos;m very
-          enthusiastic about roles that touch Python, C#, or Java on the
-          backend. I want to grow into a <b>full-stack</b> mindset and would
-          love any exposure to those areas.
-          <br /> I thrive in solitude. I&apos;m self-driven and comfortable
+          <br /> I thrive when I can focus. I&apos;m self-driven and comfortable
           delivering results
           <strong className="text-gray-600 dark:text-gray-300">
             {" "}
@@ -261,7 +257,7 @@ const About = () => {
           </strong>
           .I&apos;m looking for a place to contribute, provide value, solve real
           problems and move up from Junior to Mid-level with maximum efficiency,
-          and keep climbing ...
+          and keep improving.
         </p>
       </div>
     </div>
