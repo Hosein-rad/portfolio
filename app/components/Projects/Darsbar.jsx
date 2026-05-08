@@ -49,6 +49,15 @@ const Darsbar = () => {
             </i>
             , Darsbar holds significant potential for enhancing the educational
             experience.
+            <br />
+            source code:{" "}
+            <a
+              href="https://github.com/Hosein-rad/darsbar"
+              target="_blank"
+              className="underline text-blue-700 dark:text-blue-200"
+            >
+              github.com/Hosein-rad/darsbar
+            </a>
           </p>
         </div>
         <div className="md:w-150 md:mt-10 h-50 mx-10 hidden md:flex justify-center items-center text-center border rounded-2xl bg-radial from-black to-transparent cursor-not-allowed">

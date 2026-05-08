@@ -9,19 +9,25 @@ const Cryptionary = () => {
   return (
     <div className="flex flex-col justify-center">
       <div className="h-fit mx-2 md:mx-20 pt-10 flex flex-col-reverse md:flex-row text-black dark:text-white">
-        <Image
-          src={"/images/cryptionary.webp"}
-          alt="Cryptionary"
-          width={600}
-          height={300}
-          className="md:w-150 mt-3 md:mt-0 mx-auto md:mx-10 hover:scale-110 duration-500"
-        />
+        <a
+          href="https://cryptionary.ir.hosein.dev"
+          target="_blank"
+          className="mt-3 md:mt-0 mx-auto md:mx-10"
+        >
+          <Image
+            src={"/images/cryptionary.webp"}
+            alt="Cryptionary"
+            width={600}
+            height={300}
+            className="md:w-150 mt-3 md:mt-0 mx-auto md:mx-10 hover:scale-110 duration-500"
+          />
+        </a>
         <div>
           <h1 className="pb-6 text-2xl md:text-4xl mx-10">
             {/* className="w-70 md:w-120 pb-5 ml-3 md:pb-8 text-2xl md:text-4xl" */}
             <a
               target="_blank"
-              href="https://www.cryptionary.ir"
+              href="https://cryptionary.ir.hosein.dev"
               className="text-4xl md:text-5xl hover:text-blue-700 dark:hover:text-blue-300 duration-200 animate-pulse hover:animate-none"
             >
               Cryptionary
@@ -46,16 +52,17 @@ const Cryptionary = () => {
           </h1>
           <p className="mx-5 md:w-110">
             This project is a dynamic cryptocurrency tracking website developed
-            using{" "}
-            <u>
-              <b>React.js</b>
-            </u>{" "}
-            and{" "}
-            <u>
-              <b>TailwindCSS</b>
-            </u>
+            using <b>React.js</b> and <b>TailwindCSS</b>
             . It&apos;s an actively evolving project with a roadmap for
-            incorporating advanced features and styles.
+            incorporating advanced features and styles. <br />
+            source code:{" "}
+            <a
+              href="https://github.com/Hosein-rad/Cryptionary"
+              target="_blank"
+              className="underline text-blue-700 dark:text-blue-200"
+            >
+              github.com/Hosein-rad/Cryptionary
+            </a>
           </p>
         </div>
       </div>
