@@ -157,7 +157,7 @@ const About = () => {
                 <em className="text-red-200">removed</em> every single
                 distraction from my life— including people who mattered the
                 most. My world right now is very, very simple. It consists of
-                one thing: <b>my dream</b>.
+                two things: heath, and <b>goal</b>.
                 <br />
                 I&apos;ve proven I can endure the <em>silence</em>, the{" "}
                 <em>lack of reward</em>, and the crushing <em>self-doubt</em>{" "}
