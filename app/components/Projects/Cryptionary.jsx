@@ -19,7 +19,7 @@ const Cryptionary = () => {
             alt="Cryptionary"
             width={600}
             height={300}
-            className="md:w-150 mt-3 md:mt-0 mx-auto md:mx-10 hover:scale-110 duration-500"
+            className="max-w-full h-auto md:w-150 mt-3 md:mt-0 mx-auto md:mx-10 hover:scale-110 duration-500"
           />
         </a>
         <div>
