@@ -16,14 +16,6 @@ const Indicator = () => {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        console.log(
-          "Observer entries:",
-          entries.map((e) => ({
-            id: e.target.id,
-            ratio: e.intersectionRatio,
-            intersecting: e.isIntersecting,
-          }))
-        );
         const mostVisible = entries.reduce((best, entry) =>
           entry.intersectionRatio > best.intersectionRatio ? entry : best
         );

@@ -21,8 +21,11 @@ const MiniProjects = () => {
     if (openDots || openCalc) {
       document.body.style.overflow = "clip";
     } else {
-      document.body.style.overflow = "visible";
+      document.body.style.overflow = "auto";
     }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [openDots, openCalc]);
 
   const restartGame = () => {
@@ -83,6 +86,7 @@ const MiniProjects = () => {
       </div>
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="http://www.github.com/hosein-rad/"
         className="relative mx-5 flex flex-col items-center justify-center rounded-2xl  hover:scale-110 cursor-pointer duration-200"
       >
@@ -136,7 +140,7 @@ const MiniProjects = () => {
       )}
       {openCalc && (
         <div
-          id="dots-boxes"
+          id="calculator"
           onClick={handleOverlayClick}
           className="absolute w-dvw md:w-[97dvw] h-[300dvh] backdrop-blur-md scroll-[none] z-100 duration-500"
         >

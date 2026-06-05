@@ -1,11 +1,14 @@
 const Darsbar = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div 
+    className="flex flex-col items-center justify-center"
+    >
       <div className="h-fit mx-auto md:mx-20 py-10 flex flex-col md:flex-row text-black dark:text-white">
         <div className="md:text-right">
           <h1 className="pb-5 mx-10 md:pb-8 text-2xl md:text-4xl">
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.darsbar.ir"
               className="text-4xl md:text-5xl hover:text-blue-700 dark:hover:text-blue-300 duration-200 animate-pulse hover:animate-none"
             >
@@ -27,7 +30,7 @@ const Darsbar = () => {
             </a>
             : Student & Teacher Dashboard
           </h1>
-          <p className="mx-5 text-sm md:text-[16px] md:pl-15 text-justify">
+          <p className="mx-5 text-sm md:text-[16px] md:pl-15 md:text-justify">
             Darsbar is a comprehensive dashboard designed to streamline the
             study process for students and educators. This project facilitates
             user <u>sign-in and sign-up</u> for both students and teachers,
@@ -54,6 +57,7 @@ const Darsbar = () => {
             <a
               href="https://github.com/Hosein-rad/darsbar"
               target="_blank"
+              rel="noopener noreferrer"
               className="underline text-blue-700 dark:text-blue-200"
             >
               github.com/Hosein-rad/darsbar
@@ -65,7 +69,6 @@ const Darsbar = () => {
             Not Available <br /> at the moment
           </p>
         </div>
-        {/* <Image src={null} alt="" width={600} height={300} className="mx-10" /> */}
       </div>
       <div className="w-4/5 border-white dark:border-black border-b-6 border-dotted mask-x-from-50%"></div>
     </div>

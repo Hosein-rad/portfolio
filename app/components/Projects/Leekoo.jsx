@@ -7,27 +7,30 @@ const Leekoo = () => {
   const [moreText, setMoreText] = useState(false);
 
   return (
-    <div className="flex flex-col justify-center">
+    <div
+      className="flex flex-col justify-center"
+    >
       <div className="h-fit mx-auto md:mx-20 pt-10 flex flex-col-reverse md:flex-row text-black dark:text-white">
         <Image
           src={"/images/leekoo1.webp"}
-          alt="Cryptionary"
+          alt="Leekoo website preview"
           width={600}
           height={300}
-          className="md:w-150 mx-auto my-4 md:mx-10 hover:scale-110 duration-500"
+          className="max-w-full h-auto md:w-150 mx-auto my-4 md:mx-10 hover:scale-110 duration-500"
         />
 
         <div>
           <h1 className="pb-6 text-2xl md:text-4xl mx-10">
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.leekoo.ir"
               className="text-4xl md:text-5xl hover:text-blue-700 dark:hover:text-blue-300 duration-200 animate-pulse hover:animate-none"
             >
               Leekoo
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 inline -mt-8"
+                className="size-3 md:size-4 inline -mt-8"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -40,7 +43,7 @@ const Leekoo = () => {
                 <path d="M10 14 21 3" />
               </svg>
             </a>
-            : children & teenagers&apos; care center
+            : Children & Teenagers&apos; Care Center
           </h1>
           <p className="mx-5 md:w-110 text-justify">
             This project involved the development of a{" "}
