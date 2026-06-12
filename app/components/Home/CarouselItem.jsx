@@ -22,7 +22,7 @@ const CarouselItem = () => {
         return (
           <div
             key={item.name}
-            className="relative mx-[1.5em] my-auto rounded-md"
+            className="relative mx-[1em] my-auto rounded-md hover:scale-110 duration-300"
           >
             <Image
               alt={item.name}

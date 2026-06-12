@@ -7,12 +7,10 @@ const Leekoo = () => {
   const [moreText, setMoreText] = useState(false);
 
   return (
-    <div
-      className="flex flex-col justify-center"
-    >
+    <div className="flex flex-col justify-center">
       <div className="h-fit mx-auto md:mx-20 pt-10 flex flex-col-reverse md:flex-row text-black dark:text-white">
         <Image
-          src={"/images/leekoo1.webp"}
+          src={"/images/fitshow.webp"}
           alt="Leekoo website preview"
           width={600}
           height={300}

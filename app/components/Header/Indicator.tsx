@@ -3,37 +3,50 @@
 import { useEffect, useState } from "react";
 
 const Indicator = () => {
-  const [activeId, setActiveId] = useState("hero"); // default to first section
+  const [activeId, setActiveId] = useState("hero");
   const [pos, setPos] = useState({ left: -200, width: 0 });
 
-  // ----- Intersection Observer: which section is most in view -----
   useEffect(() => {
-    const ids = ["hero", "projects", "about", "contact"]; // match your actual section ids
+    const ids = ["hero", "projects", "about", "contact"];
     const sections = ids
       .map((id) => document.getElementById(id))
       .filter(Boolean) as HTMLElement[];
     if (!sections.length) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const mostVisible = entries.reduce((best, entry) =>
-          entry.intersectionRatio > best.intersectionRatio ? entry : best
-        );
-        if (mostVisible?.isIntersecting) {
-          setActiveId(mostVisible.target.id);
-        }
-      },
-      { threshold: [0.3, 0.5, 0.7, 1] }
-    );
+    const handleScroll = () => {
+      const viewportHeight = window.innerHeight;
+      const threshold = viewportHeight * 0.3; // 30vh
 
-    sections.forEach((s) => observer.observe(s));
-    return () => observer.disconnect();
+      let bestSection = sections[0];
+      let maxVisible = 0;
+
+      for (const section of sections) {
+        const rect = section.getBoundingClientRect();
+        // Visible height of the section inside the viewport
+        const visibleHeight =
+          Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
+
+        if (visibleHeight > maxVisible) {
+          maxVisible = visibleHeight;
+          bestSection = section;
+        }
+      }
+
+      // Only switch if the winning section reaches the 30vh threshold
+      if (maxVisible >= threshold) {
+        setActiveId(bestSection.id);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // run once on mount
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // ----- Update indicator position based on active nav link -----
   useEffect(() => {
     const updatePosition = () => {
-      const nav = document.querySelector("nav"); // adjust selector if needed
+      const nav = document.querySelector("nav");
       const link = document.querySelector(`a[href="#${activeId}"]`);
       if (!nav || !link) return;
 
