@@ -79,12 +79,16 @@
 }
 
 /* a smooth dropdown - ?how to make its collapse, smooth too? */
-.dropdown-grid {
+.collapsible-grid {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.3s ease-out;
+  transition: grid-template-rows 0.2s ease-out;
 }
 
-details[open] .dropdown-grid {
+.collapsible-grid.open {
   grid-template-rows: 1fr;
+}
+
+.collapsible-grid > div {
+  overflow: hidden;
 }

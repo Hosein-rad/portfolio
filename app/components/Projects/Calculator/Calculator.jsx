@@ -35,7 +35,7 @@ function Calculator() {
     <KeyContexts.Provider value={{ arrayChanger, submit }}>
       <div className="size-fit mx-10 my-7 text-[20px] flex flex-col items-center justify-center">
         {/* the whole calculator */}
-        <div className="h-fit px-3 pb-7  bg-gray-800 rounded-4xl">
+        <div dir="ltr" className="h-fit px-3 pb-7  bg-gray-800 rounded-4xl">
           {/* the display */}
           <div className="py-3 px-2 mx-auto mt-5 mb-10 w-45 min-h-13 h-fit text-lg text-black wrap-anywhere rounded-3xl bg-neutral-300 shadow-[0_10px_15px]">
             {array}

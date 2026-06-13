@@ -1,0 +1,19 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  }, 
+  "hero": {
+    "title": {
+    "pretitle": "Hi, I'm",
+    "title": "Hosein",
+    "posttitle": "a web developer"
+
+    }, 
+    "stack": {
+      "title": "Technologies I've worked with :"
+    }
+  }
+}

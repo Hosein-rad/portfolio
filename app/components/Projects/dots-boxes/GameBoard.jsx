@@ -199,3 +199,239 @@ const GameBoard = ({ onReset }) => {
 };
 
 export default GameBoard;
+
+// the AI generated code, To be studied...
+// "use client";
+
+// import { useState, useCallback } from "react";
+
+// // Predefine line IDs for X and Y axes
+// const X_LINES = Array.from({ length: 20 }, (_, i) => `x${i + 1}`);
+// const Y_LINES = Array.from({ length: 20 }, (_, i) => `y${i + 1}`);
+// const ALL_LINES = [...X_LINES, ...Y_LINES];
+
+// // Box definitions: each box requires 4 lines (2 horizontal, 2 vertical)
+// const BOXES = [
+//   { id: "box1", lines: ["x1", "y1", "x5", "y2"] },
+//   { id: "box2", lines: ["x2", "y2", "x6", "y3"] },
+//   { id: "box3", lines: ["x3", "y3", "x7", "y4"] },
+//   { id: "box4", lines: ["x4", "y4", "x8", "y5"] },
+//   { id: "box5", lines: ["x5", "y6", "x9", "y7"] },
+//   { id: "box6", lines: ["x6", "y7", "x10", "y8"] },
+//   { id: "box7", lines: ["x7", "y8", "x11", "y9"] },
+//   { id: "box8", lines: ["x8", "y9", "x12", "y10"] },
+//   { id: "box9", lines: ["x9", "y11", "x13", "y12"] },
+//   { id: "box10", lines: ["x10", "y12", "x14", "y13"] },
+//   { id: "box11", lines: ["x11", "y13", "x15", "y14"] },
+//   { id: "box12", lines: ["x12", "y14", "x16", "y15"] },
+//   { id: "box13", lines: ["x13", "y16", "x17", "y17"] },
+//   { id: "box14", lines: ["x14", "y17", "x18", "y18"] },
+//   { id: "box15", lines: ["x15", "y18", "x19", "y19"] },
+//   { id: "box16", lines: ["x16", "y19", "x20", "y20"] },
+// ];
+
+// type Player = "blue" | "red";
+// type LineStatus = { drawnBy: Player | null };
+// type BoxStatus = { filledBy: Player | null };
+
+// const GameBoard = ({ onReset }: { onReset?: () => void }) => {
+//   const [lines, setLines] = useState<Record<string, LineStatus>>(() =>
+//     Object.fromEntries(ALL_LINES.map((id) => [id, { drawnBy: null }]))
+//   );
+//   const [boxes, setBoxes] = useState<Record<string, BoxStatus>>(() =>
+//     Object.fromEntries(BOXES.map((box) => [box.id, { filledBy: null }]))
+//   );
+//   const [currentTurn, setCurrentTurn] = useState<Player>("blue");
+//   const [blueScore, setBlueScore] = useState(0);
+//   const [redScore, setRedScore] = useState(0);
+
+//   // Derived gameOver state (no useEffect needed)
+//   const gameOver = BOXES.every((box) => boxes[box.id].filledBy !== null);
+
+//   // Helper to check which boxes become filled given a lines object
+//   const getNewlyFilledBoxes = useCallback(
+//     (updatedLines: Record<string, LineStatus>, player: Player) => {
+//       const newlyFilled: string[] = [];
+//       for (const box of BOXES) {
+//         // Skip already filled boxes
+//         if (boxes[box.id].filledBy !== null) continue;
+//         // Check if all 4 lines are drawn (by anyone)
+//         const allDrawn = box.lines.every(
+//           (lineId) => updatedLines[lineId].drawnBy !== null
+//         );
+//         if (allDrawn) {
+//           newlyFilled.push(box.id);
+//         }
+//       }
+//       return newlyFilled;
+//     },
+//     [boxes] // boxes needed to know which are already filled
+//   );
+
+//   const handleLineClick = (lineId: string) => {
+//     if (gameOver) return;
+//     // Line already drawn?
+//     if (lines[lineId].drawnBy !== null) return;
+
+//     // 1. Create new lines object with the line drawn by current player
+//     const newLines = {
+//       ...lines,
+//       [lineId]: { drawnBy: currentTurn },
+//     };
+
+//     // 2. Check which boxes become filled using the *new* lines object
+//     const newlyFilledBoxIds = getNewlyFilledBoxes(newLines, currentTurn);
+
+//     // 3. Prepare updates for boxes and scores
+//     const newBoxes = { ...boxes };
+//     let newBlueScore = blueScore;
+//     let newRedScore = redScore;
+
+//     for (const boxId of newlyFilledBoxIds) {
+//       newBoxes[boxId] = { filledBy: currentTurn };
+//       if (currentTurn === "blue") newBlueScore += 1;
+//       else newRedScore += 1;
+//     }
+
+//     // 4. Update all state in one batch
+//     setLines(newLines);
+//     setBoxes(newBoxes);
+//     setBlueScore(newBlueScore);
+//     setRedScore(newRedScore);
+
+//     // 5. Turn handling: if no boxes were filled, switch turn; otherwise keep same player
+//     if (newlyFilledBoxIds.length === 0) {
+//       setCurrentTurn(currentTurn === "blue" ? "red" : "blue");
+//     }
+//     // else same player gets another turn (no change)
+//   };
+
+//   const resetGame = () => {
+//     setLines(
+//       Object.fromEntries(ALL_LINES.map((id) => [id, { drawnBy: null }]))
+//     );
+//     setBoxes(
+//       Object.fromEntries(BOXES.map((box) => [box.id, { filledBy: null }]))
+//     );
+//     setCurrentTurn("blue");
+//     setBlueScore(0);
+//     setRedScore(0);
+//     if (onReset) onReset();
+//   };
+
+//   const winnerMessage =
+//     blueScore > redScore
+//       ? "BLUE WINS"
+//       : redScore > blueScore
+//       ? "RED WINS"
+//       : "DRAW!";
+
+//   // Render dots (static)
+//   const dots = Array.from({ length: 25 }, (_, i) => (
+//     <div key={i} className="w-2.5 h-2.5 m-5 bg-black rounded-full border-0" />
+//   ));
+
+//   const xLineElements = X_LINES.map((id) => (
+//     <div
+//       key={id}
+//       className={`ml-1.75 w-12.5 h-2.5 rounded-[20px] z-10 cursor-pointer duration-200 ${
+//         lines[id].drawnBy === "blue"
+//           ? "bg-blue-600"
+//           : lines[id].drawnBy === "red"
+//           ? "bg-red-600"
+//           : "bg-[unset] hover:bg-gray-600"
+//       }`}
+//       onClick={() => handleLineClick(id)}
+//     />
+//   ));
+
+//   const yLineElements = Y_LINES.map((id) => (
+//     <div
+//       key={id}
+//       className={`mt-1.75 w-2.5 h-12.5 rounded-[20px] z-10 cursor-pointer duration-200 ${
+//         lines[id].drawnBy === "blue"
+//           ? "bg-blue-600"
+//           : lines[id].drawnBy === "red"
+//           ? "bg-red-600"
+//           : "bg-[unset] hover:bg-gray-600"
+//       }`}
+//       onClick={() => handleLineClick(id)}
+//     />
+//   ));
+
+//   const boxElements = BOXES.map((box) => (
+//     <div
+//       key={box.id}
+//       className={`m-2.5 size-12.5 rounded-[20px] z-10 ${
+//         boxes[box.id].filledBy === "blue"
+//           ? "bg-blue-300/50"
+//           : boxes[box.id].filledBy === "red"
+//           ? "bg-red-300/50"
+//           : "bg-[unset]"
+//       }`}
+//     />
+//   ));
+
+//   return (
+//     <>
+//       <div className="mt-2 flex items-center justify-around text-lg">
+//         <p className="w-1/4 px-2 font-bold text-blue-700 border-r-2 border-b rounded-r-full">
+//           Blue: {blueScore}
+//         </p>
+//         <svg
+//           width="24"
+//           height="24"
+//           viewBox="0 0 24 24"
+//           fill="none"
+//           xmlns="http://www.w3.org/2000/svg"
+//           className={`animate-bounce ${
+//             currentTurn === "blue"
+//               ? "-translate-x-10 rotate-90"
+//               : "translate-x-10 -rotate-90"
+//           } duration-500`}
+//         >
+//           <path
+//             d="M12 12V2M12 19L7 14M12 19L17 14"
+//             stroke="white"
+//             strokeWidth="3"
+//             strokeLinecap="round"
+//             strokeLinejoin="round"
+//           />
+//         </svg>
+//         <p className="w-1/4 px-2 font-bold text-red-700 text-right border-l-2 border-b rounded-l-full">
+//           Red: {redScore}
+//         </p>
+//       </div>
+
+//       <div className="relative" id="container">
+//         <div className="grid justify-center items-center text-center grid-cols-[repeat(5,1fr)] grid-rows-[repeat(5,1fr)] gap-5">
+//           {dots}
+//         </div>
+//         <div className="my-5 mx-7 absolute inset-0 grid grid-cols-[repeat(4,1fr)] grid-rows-[repeat(5,1fr)] gap-y-15 gap-x-1.25">
+//           {xLineElements}
+//         </div>
+//         <div className="my-7 mx-5 absolute inset-0 grid grid-cols-[repeat(5,1fr)] grid-rows-[repeat(4,1fr)] gap-y-1.25 gap-x-15">
+//           {yLineElements}
+//         </div>
+//         <div className="m-6.25 absolute inset-0 grid grid-cols-[repeat(4,1fr)] grid-rows-[repeat(4,1fr)]">
+//           {boxElements}
+//         </div>
+//         {gameOver && (
+//           <div className="absolute inset-0 p-5 flex flex-col items-center justify-center backdrop-blur-sm rounded-2xl z-200">
+//             <p className="w-fit p-10 my-2.5 text-center text-[4rem] text-white bg-radial from-green-500 to-transparent rounded-[100%]">
+//               {winnerMessage}
+//             </p>
+//             <button
+//               onClick={resetGame}
+//               className="py-2 px-4 mt-4 size-fit bg-black rounded-full text-2xl hover:bg-purple-800 hover:scale-110 duration-200 animate-pulse hover:animate-none cursor-pointer"
+//             >
+//               play again?
+//             </button>
+//           </div>
+//         )}
+//       </div>
+//     </>
+//   );
+// };
+
+// export default GameBoard;

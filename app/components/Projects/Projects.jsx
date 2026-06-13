@@ -1,7 +1,6 @@
 import Cryptionary from "./Cryptionary";
-import Darsbar from "./Darsbar";
-import MiniProjects from "./MiniProjects";
-import Fitshow from "./Fitshow";
+import Other from "./Other";
+// import Darsbar from "./Darsbar";
 
 const Projects = () => {
   return (
@@ -13,9 +12,8 @@ const Projects = () => {
         My Projects
       </h1>
       <Cryptionary />
-      <Darsbar />
-      <Fitshow />
-      <MiniProjects />
+      {/* <Darsbar />  // finish up + add the translation file too   */}
+      <Other />
     </div>
   );
 };
