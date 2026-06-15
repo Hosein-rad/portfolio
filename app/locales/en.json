@@ -4,16 +4,60 @@
     "projects": "Projects",
     "about": "About",
     "contact": "Contact"
-  }, 
+  },
   "hero": {
     "title": {
-    "pretitle": "Hi, I'm",
-    "title": "Hosein",
-    "posttitle": "a web developer"
-
-    }, 
+      "preTitle": "Hi, I'm",
+      "title": "Hosein",
+      "postTitle": "a web developer"
+    },
     "stack": {
       "title": "Technologies I've worked with :"
+    }
+  },
+  "projects": {
+    "centerpiece": {
+      "heading": "Centerpiece",
+      "title": "Cryptionary",
+      "postTitle": "Real-time Cryptocurrency Dashboard",
+      "description": "This project is a dynamic cryptocurrency tracking website developed using React.js and TailwindCSS. It's an actively evolving project with a roadmap for incorporating advanced features and styles.",
+      "srcTitle": "Source code",
+      "sourceCode": "github.com/Hosein-rad/Cryptionary",
+      "featuresTitle": "Key Features & Technologies",
+      "featuresList": {
+        "1": {
+          "title": "Data Integration",
+          "body": "Leverages APIs from reputable sources like CoinGecko and Coinpaprika to fetch real-time cryptocurrency data, including prices, market capitalization, and trading volumes."
+        },
+        "2": {
+          "title": "Interactive UI/UX",
+          "body": "Implements engaging user interface elements such as animated gradient transitions, a captivating hover effect with mouse tracking text, and a smooth sliding sidebar for enhanced navigation and user experience."
+        },
+        "3": {
+          "title": "Resilience in Restricted Environments",
+          "body": "Designed to function effectively despite potential internet sanctions. To demonstrate full functionality, static data is utilized, ensuring all features are showcased even when live data fetching is not feasible."
+        }
+      }
+    },
+    "other": {
+      "heading": "other projects",
+      "calc": {
+        "description": "Mini Calculator",
+        "days": "3 days",
+        "heading": "Calculator"
+      },
+      "dots": {
+        "description": "Dots & Boxes",
+        "days": "2 days",
+        "heading": "Dots & Boxes",
+        "red": "Red",
+        "blue": "Blue",
+        "wRed": "RED WINS!",
+        "wBlue": "BLUE WINS!",
+        "draw": "DRAW!",
+        "again": "play again?"
+      },
+      "github": { "description": "Mini Calculator", "days": "day 1" }
     }
   }
 }

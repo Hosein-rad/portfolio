@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const GameBoard = ({ onReset }) => {
+  const { t } = useTranslation();
+
   let dots = [];
   let linesX = [];
   let linesY = [];
@@ -134,7 +137,7 @@ const GameBoard = ({ onReset }) => {
     <>
       <div className="mt-2 flex items-center justify-around text-lg">
         <p className="w-1/4 px-2 font-bold text-blue-700 border-r-2 border-b rounded-r-full">
-          Blue: {p1point}
+          {t("projects.other.dots.blue")}: {p1point}
         </p>
         <svg
           width="24"
@@ -157,7 +160,7 @@ const GameBoard = ({ onReset }) => {
           />
         </svg>
         <p className="w-1/4 px-2 font-bold text-red-700 text-right border-l-2 border-b rounded-l-full">
-          Red: {p2point}
+          {t("projects.other.dots.red")}: {p2point}
         </p>
       </div>
 
@@ -180,16 +183,16 @@ const GameBoard = ({ onReset }) => {
           <div className="absolute inset-0 p-5 flex flex-col items-center justify-center backdrop-blur-sm rounded-2xl z-200">
             <p className="w-fit p-10 my-2.5 text-center text-[4rem] text-white bg-radial from-green-500 to-transparent rounded-[100%]">
               {p1point > p2point
-                ? "BLUE WINS"
+                ? `${t("projects.other.dots.wBlue")}`
                 : p2point > p1point
-                ? "RED WINS"
-                : "DRAW!"}
+                ? `${t("projects.other.dots.wRed")}`
+                : `${t("projects.other.dots.draw")}`}
             </p>
             <button
               onClick={onReset}
               className="py-2 px-4 mt-4 size-fit bg-black rounded-full text-2xl hover:bg-purple-800 hover:scale-110 duration-200 animate-pulse hover:animate-none cursor-pointer"
             >
-              play again?
+              {t("projects.other.dots.again")}
             </button>
           </div>
         )}

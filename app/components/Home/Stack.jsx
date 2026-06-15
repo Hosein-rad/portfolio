@@ -2,8 +2,8 @@ import { useTranslation } from "@/app/hooks/useTranslation";
 import Carousel from "./Carousel";
 
 const Stack = () => {
-    const { t } = useTranslation();
-  
+  const { t } = useTranslation();
+
   return (
     <div
       dir="ltr"

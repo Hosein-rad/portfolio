@@ -1,3 +1,5 @@
+"use client";
+
 import { useMemo, useState } from "react";
 import { Parser } from "expr-eval";
 import { Keypad } from "./Keypad";
@@ -5,7 +7,6 @@ import { KeyContexts } from "./Contexts";
 
 function Calculator() {
   const [array, setArray] = useState([]);
-
   const parser = useMemo(() => new Parser(), []);
 
   const arrayChanger = (label) => {
