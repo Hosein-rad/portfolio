@@ -3,11 +3,13 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { useTranslation } from "@/app/hooks/useTranslation";
 
 const About = () => {
   const [openStory, setOpenStory] = useState(false);
   const ref = useRef();
   const ref2 = useRef();
+  const { t } = useTranslation();
 
   const setImage1 = () => {
     if (ref && ref2) {
@@ -16,7 +18,7 @@ const About = () => {
     }
   };
   const setImage2 = () => {
-    if (ref && ref2) {
+    if (ref.current && ref2.current) {
       ref.current.style.opacity = "0";
       ref2.current.style.opacity = "1";
     }
@@ -30,167 +32,92 @@ const About = () => {
 
   useEffect(() => {
     if (openStory) {
-      document.body.style.overflow = "clip";
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "visible";
+      document.body.style.overflow = "";
     }
   }, [openStory]);
 
   return (
     <div
       id="about"
-      className="h-fit pt-15 md:pt-25 bg-sky-200 dark:bg-sky-950 flex flex-col items-center text-black dark:text-white"
+      className="h-fit pt-15 md:pt-25 bg-sky-200 dark:bg-sky-950 flex flex-col justify-center items-center text-black dark:text-white"
     >
       {openStory && (
         <div
-          id="dots-boxes"
           onClick={handleOverlayClick}
-          className="absolute -mt-100 md:-left-20 w-screen h-[300dvh] md:w-[150dvw] md:h-[300dvh] backdrop-blur-3xl z-100 duration-300"
+          className="fixed inset-0 flex items-center justify-center backdrop-blur-md z-50"
         >
           {createPortal(
-            <div className="fixed h-full top-0 left-0 mx-5 md:mx-40 flex flex-col items-end rounded-4xl border backdrop-brightness-20 text-white z-101 animate-open-portal origin-center md:origin-[90%_50%] leading-relaxed">
-              <div className="w-full flex justify-end border-b bg-black/90 rounded-t-4xl z-101">
-                <Image
-                  src="/svgs/close.svg"
-                  alt="close btn"
-                  width={30}
-                  height={30}
-                  className="mr-5 my-3 size-10 border border-white rounded-full bg-black hover:bg-red-600 hover:rotate-360 cursor-pointer duration-500"
-                  onClick={() => setOpenStory(() => false)}
-                />
+            <div className="fixed inset-0 mx-5 md:mx-30 my-5 md:my-10 backdrop-brightness-20 backdrop-blur-2xl text-white animate-open-portal origin-center overflow-hidden border-y-20 border-black/50 rounded-4xl leading-relaxed z-51">
+              <Image
+                src="/svgs/close.svg"
+                alt="close btn"
+                width={30}
+                height={30}
+                className="absolute right-0 mr-5 size-10 border border-white rounded-full bg-black opacity-60 hover:opacity-100 hover:bg-red-600 hover:rotate-360 cursor-pointer duration-500"
+                onClick={() => setOpenStory(() => false)}
+              />
+              <div className="h-full py-12 md:py-15 px-3 md:px-20 text-inherit md:text-justify text-sm md:text-2xl overflow-y-scroll scroll-hidden space-y-3">
+                <p className="indent-3">{t("about.myStory.1")}</p>
+                <p className="inline-block my-3 text-gray-300/90 indent-3 italic">
+                  {t("about.myStory.2")}
+                </p>
+                <p className="indent-3">{t("about.myStory.3")}</p>
+                <p>
+                  {t("about.myStory.4")}
+                  <span className="inline font-bold bg-linear-45 from-red-400 to-blue-400 bg-clip-text text-transparent">
+                    {t("about.myStory.programming")}
+                  </span>
+                </p>
+
+                <p className="inline-block text-amber-200">
+                  {t("about.myStory.5")}
+                </p>
+                <p className="indent-3">{t("about.myStory.6")}</p>
+                <p>{t("about.myStory.7")}</p>
+                <p className="indent-3">{t("about.myStory.8")}</p>
+                <p className="indent-3">
+                  {t("about.myStory.9")}
+                  <span className="inline bg-gray-950 text-green-400 font-mono text-xs md:text-sm p-1 md:p-2 rounded-md border border-gray-700 shadow-inner">
+                    {t("about.myStory.code")}
+                  </span>
+                </p>
+                <p className="indent-3">{t("about.myStory.10")}</p>
+
+                <p className="inline-block mt-2 p-3 md:p-7 bg-gray-900 rounded-xl shadow-lg indent-4">
+                  {t("about.myStory.11")}
+                  {t("about.myStory.12")}
+                </p>
               </div>
-              <p className="h-140 px-5 md:mx-10 -mt-15 -mb-15 py-20 text-justify text-sm md:text-[16px] overflow-y-scroll scroll-hidden z-100">
-                I&apos;m a 28 year-old English teacher. I entered the classroom
-                for one simple reason: <strong>passion</strong>. I genuinely
-                wanted to <em>shape minds and make a difference</em>. But after
-                only 2 months in front of the classroom, I hit a shock of
-                realization:{" "}
-                <span className="block text-indigo-200">
-                  - The job, the system, the daily reality; Nothing like I
-                  imagined. Not much about teaching, mostly just babysitting. No
-                  growth. No future. Just the bare minimum survival -
-                </span>{" "}
-                I felt a deep, unsettling mismatch between what I was doing and
-                what I was capable of. So, I didn&apos;t just complain. I
-                started a rigorous obsessive research on myself. I analyzed my{" "}
-                <i>personality type</i>, my <i>long-term vision</i>, and
-                specifically my <i>cognitive needs</i>. I&apos;ve learned that
-                doing simpler repetitive work, with no room to
-                <span className="text-amber-100"> thrive</span> and{" "}
-                <span className="text-green-200"> grow</span>, without cognitive
-                challenge and improvement, feels like{" "}
-                <em className="text-gray-300">slow erosion</em>, with such
-                little impact in the world. Certainly not enough impact to look
-                back on and be proud of, when I&apos;m old... I craved{" "}
-                <b>complexity</b>. I needed an uphill, to keep
-                <strong>
-                  {" "}
-                  going <sup> up</sup>
-                </strong>
-                . That&apos;s when I kept stumbling over the same word again and
-                again:
-                <b className="bg-[linear-gradient(90deg,rgb(150,150,255)0%,rgb(255,150,150)100%)] bg-clip-text text-transparent">
-                  {" "}
-                  {"<"}Programming{" />"}
-                </b>{" "}
-                <br />
-                That was the <span className="text-yellow-200">spark</span>. I
-                dove into Front-End Development with hunger. The basics came
-                quickly, but I soon realized that &quot;knowing the basics&quot;
-                in this field is like knowing the alphabet. So I went deeper. I
-                buried myself in frameworks, libraries, and the adjacent skills
-                that turn a coder into a creator— editing, design sensibility,
-                workflow optimization, you name it. Due to my proficiency in
-                English, I had a <b>superpower</b>: I could consume the{" "}
-                <i>world&apos;s best documentation and tutorials</i> for free,
-                and faster than most. I learned quick. I built a lot. <br />
-                But the journey from &quot;learning&quot; to &quot;being
-                qualified&quot; has been a brutal, 2.5-year marathon of
-                self-discipline. And I want to be completely honest with you
-                about that struggle. During this time, I was working a second
-                job just to keep the lights on. There were{" "}
-                <b className="text-red-300">zero rewards</b> along the way— no
-                paychecks for a nice UI, no pats on the back for debugging a
-                tricky component. There was only the echo of my own{" "}
-                <i className="text-blue-300">hope</i>. I&apos;ve put my entire
-                life on pause. I&apos;ve said{" "}
-                <i className="text-red-200"> No</i> to friends,{" "}
-                <i className="text-red-200"> No</i> to family gatherings,{" "}
-                <i className="text-red-200"> No </i>
-                to nearly every social event. I even turned down quick-money
-                opportunities that I desperately needed, opportunities that were
-                right there in front of me. I said no, not because I&apos;m
-                foolish, but because I knew saying yes would pull me away from
-                the gravitational pull of{" "}
-                <b className="text-amber-200">my dream</b>. <br />
-                And I won&apos;t pretend I was perfect. It wasn&apos;t always a
-                straight line. I got pulled away for{" "}
-                <span className="text-red-200">months</span> at a time. A few
-                times, I genuinely tried to change course — serious deviations
-                from the main trajectory, not just distractions. I walked away
-                from this path entirely. But time has a way of revealing the
-                truth: the grass is never{" "}
-                <span className="text-green-300">greener</span>. Slowly, the
-                deep-rooted goals and the calm, honest desires of my heart
-                started whispering again and kept pulling me back, bit by bit,
-                until I&apos;d find myself, once again, on the same old plan,
-                same old{" "}
-                <code className="px-1 bg-[#1e1e1e] text-[#d4d4d4] rounded-lg font-[Courier_New]">
-                  code
-                </code>
-                . The same quiet certainty that this was always where I
-                belonged.
-                <br />
-                This is why I know this is my destiny. I&apos;m no longer in
-                that wide-eyed, enthusiastic beginner phase. That phase is
-                <span className="text-gray-300"> long gone</span>. Now, this is
-                about <b>survival</b> and, honestly, a bit of{" "}
-                <span className="text-red-200">aggression</span>. It&apos;s
-                about much more than passion now, It&apos;s about{" "}
-                <em>My Future</em>.
-                <br />I can promise you this: I am{" "}
-                <u className="text-red-200">not</u> the employee who clocks in,
-                collects the paycheck and settles for average. That kind of
-                existence is what I&apos;ve been fighting against for the last
-                two and a half years. Once my foot is through the door, I will
-                improve with all I&apos;ve got. I have{" "}
-                <em className="text-red-200">removed</em> every single
-                distraction from my life— including people who mattered the
-                most. My world right now is very, very simple. It consists of
-                two things: heath, and <b>goal</b>.
-                <br />
-                I&apos;ve proven I can endure the <em>silence</em>, the{" "}
-                <em>lack of reward</em>, and the crushing <em>self-doubt</em>{" "}
-                without <b className="text-red-200">any support</b>. On the
-                contrary,{" "}
-                <span className="inline text-gray-300">
-                  with many quiet votes of disbelief, louder than any &quot;give
-                  up&quot;.
-                </span>{" "}
-                Now, imagine what I can do for a business with a direction, a
-                team, and a mission to align with. I&apos;ll tell you this:
-                There&apos;s no failure in my vocabulary, I WILL get to it one
-                way or another, it&apos;s just a matter of{" "}
-                <strong className="text-blue-300">when</strong>. <br />
-                I&apos;m not looking for an easy path or a comfortable career.
-                I&apos;m looking for a door. Give me the chance, and I&apos;ll
-                show you what I&apos;m made of. <br /> That&apos;s my story. And
-                I can&apos;t wait to prove it.
-              </p>
-              <div className="w-full h-[5em] flex border-t bg-black/90 rounded-b-4xl z-101"></div>
             </div>,
-            document.getElementById("about")
+            document.body
           )}
         </div>
       )}
-      <h1 className="w-fit px-20 py-5 text-black dark:text-white text-center text-4xl md:text-6xl border-white dark:border-black border-b-4 mask-x-from-85%">
-        Who am I ?
+      <h1 className="w-fit px-20 py-3 text-black dark:text-white text-center text-4xl md:text-6xl border-white dark:border-black border-b-4 mask-x-from-85%">
+        {t("about.title")}
       </h1>
+      <span
+        dir="ltr"
+        className="w-full block mt-5 text-lg md:text-2xl text-center font-normal"
+      >
+        <span className="text-cyan-700 dark:text-cyan-200">
+          {t("about.subtitle1")}
+        </span>{" "}
+        <span className="hidden md:inline">|</span>
+        <span className="text-fuchsia-700 dark:text-fuchsia-200 text-nowrap">
+          {" "}
+          {t("about.subtitle2")}
+        </span>{" "}
+      </span>
 
-      <div className="flex justify-between flex-col md:flex-row-reverse w-full md:w-4/5 overflow-hidden">
+      {/* div containing 'my story' and short intro sections */}
+      <div className="flex justify-between flex-col md:flex-row w-full md:w-4/5 overflow-hidden">
+        {/* My Story section (picture and button) */}
         <div
           id="my-story"
-          className="relative flex flex-col items-center justify-center duration-300 group"
+          className="relative md:w-1/3 flex flex-col items-center md:mt-5 justify-start duration-300 group"
         >
           <div
             className="relative hover:scale-90 duration-300 cursor-pointer"
@@ -221,44 +148,21 @@ const About = () => {
             onMouseEnter={setImage2}
             onMouseLeave={setImage1}
           >
-            My Story
+            {t("about.myStory.button")}
           </button>
         </div>
-        <p className="md:w-[70%] mt-5 md:mt-10">
-          <span className="w-full block mb-4 text-lg text-center font-normal">
-            <span className="text-cyan-700 dark:text-cyan-200">
-              Front-End Developer
-            </span>{" "}
-            |
-            <span className="text-fuchsia-700 dark:text-fuchsia-200 text-nowrap">
-              {" "}
-              2.5 Years Self-Taught
-            </span>{" "}
-            <b className="hidden md:inline">|</b>
-            <span className="text-amber-700 dark:text-amber-200 text-nowrap">
-              {" "}
-              Ready to start immediately
-            </span>
-          </span>
-          I&apos;m Hosein Rad. specialized in building clean, complex interfaces
-          and solving problems. With{" "}
-          <strong>professional fluency in English</strong>, I navigate
-          documentations and technical resources with ease. <br />I have a
-          strong eye for{" "}
-          <em className="text-green-800 dark:text-green-100">design</em> and{" "}
-          <em className="text-purple-900 dark:text-purple-100">detail</em>, and
-          I genuinely enjoy turning complicated layouts into smooth, working
-          code, so much so, that I often lose track of time, working.
-          <br /> I thrive when I can focus. I&apos;m self-driven and comfortable
-          delivering results
-          <strong className="text-gray-600 dark:text-gray-300">
-            {" "}
-            without someone looking over my shoulder
-          </strong>
-          .I&apos;m looking for a place to contribute, provide value, solve real
-          problems and move up from Junior to Mid-level with maximum efficiency,
-          and keep improving.
-        </p>
+
+        {/* Short introduction section */}
+        <div className="md:w-[70%] mt-3 mx-2 md:mt-14 md:text-xl">
+          <p>
+            <b>{t("about.stack1.title")}</b>: {t("about.stack1.text")}
+            <br />
+            <b>{t("about.stack2.title")}</b>: {t("about.stack2.text")}
+          </p>
+          <p className="my-2">{t("about.body1")}</p>
+          <p className="indent-3">{t("about.body2")}</p>
+          <p className="my-2">{t("about.body3")}</p>
+        </div>
       </div>
     </div>
   );

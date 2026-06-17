@@ -6,13 +6,17 @@ const CarouselItem = () => {
   const skills = [
     { name: "HTML", url: "/images/HTML.webp" },
     { name: "CSS", url: "/images/CSS.webp" },
+    { name: "JavaScript", url: "/images/Javascript.webp" },
     { name: "TailwindCSS", url: "/images/TailwindCSS.webp" },
-    { name: "Figma", url: "/images/Figma.png" },
-    { name: "Javascript", url: "/images/Javascript.webp" },
-    { name: "Typescript", url: "/images/typescript.webp" },
+    { name: "Figma", url: "/images/figma-icon.webp" },
+    { name: "Adobe Xd", url: "/images/adobeXD.webp" },
+    { name: "TypeScript", url: "/images/typescript.webp" },
     { name: "React", url: "/images/React.webp" },
     { name: "Next.JS", url: "/images/NextJS.webp" },
+    { name: "GitHub", url: "/images/github.webp" },
+    { name: "VS Code", url: "/images/vscode.webp" },
     { name: "MySQL", url: "/images/mySQL.webp" },
+    { name: "A.I", url: "/images/ai.webp" },
     { name: "Wordpress", url: "/images/wordpress.webp" },
   ];
 

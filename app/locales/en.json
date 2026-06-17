@@ -12,7 +12,7 @@
       "postTitle": "a web developer"
     },
     "stack": {
-      "title": "Technologies I've worked with :"
+      "title": "Technologies I work with :"
     }
   },
   "projects": {
@@ -57,7 +57,40 @@
         "draw": "DRAW!",
         "again": "play again?"
       },
-      "github": { "description": "Mini Calculator", "days": "day 1" }
+      "github": { "description": "Everything else...", "days": "day 1" }
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle1": "Front-End Developer",
+    "subtitle2": "React, Next.js, Tailwind",
+    "stack1": {
+      "title": "Core stack",
+      "text": "React, Next.js, Tailwind CSS, TypeScript, JavaScript (ES6+), CSS3, HTML5"
+    },
+    "stack2": {
+      "title": "Familiar with",
+      "text": "Database fundimentals, Figma, Git/GitHub, Vercel , cPanel, DNS & deployment workflows, AI tools"
+    },
+    "body1": "Based in Tehran, Iran — fully fluent in English (written and spoken).",
+    "body2": "I'm looking for a team where I can apply what I already know, learn from experienced engineers, and contribute to products that solve real problems.",
+    "body3": "If you'd like to discuss an opportunity or collaborate, feel free to get in touch.",
+    "myStory": {
+      "button": "My Story",
+      "1": "I was 25 when I became a teacher, driven by a genuine desire to make an impact. Shortly after, I confronted a hard truth:",
+      "2": "Teaching is an honorable job, but it has a ceiling. the structure is simple: time for money - indefinitely. In this model, hard work and dedication yields linear returns — never exponential.",
+      "3": "So I turned inward. I analyzed my personality, long-term vision, and reached some clarity. My mind craves complexity and meaningful challenges. I prefer ambitious, high-upside work over settling for a quiet, comfortable path.",
+      "4": "During that search, I kept bumping into the same idea:",
+      "5": "That was where everything started.",
+      "6": "I dove into front-end development headfirst. The fundamentals clicked quickly, but soon I realized these were just the alphabet. So I went further. Deeper.",
+      "7": "My English fluency gave me direct access to top-tier documentations, courses, and resources across the world. I absorbed them quickly. I still do.",
+      "8": "Moving from “learning” to “qualified” was a three-year marathon of self-discipline — funded by a second job and fueled by a long-term vision. When progress was invisible and doubt kept creeping in, I stayed consistent. I kept building long before the rewards showed up.",
+      "9": "Real client work shaped my perspective. It taught me to ship, to communicate, and to take responsibility for outcomes. I find it deeply satisfying to take something abstract — a design, a concept, a rough vision — and turn it into something real, usable, and enjoyable, all through ",
+      "10": "I wanted a craft, not just a job — one where every month, I’d be better than the last. That’s what drew me to front-end and often keeps me at my desk longer than I plan.",
+      "11": "I want a team where pushing each other forward is built into the culture — not just written on a wall.",
+      "12": "I got this far on my own. It taught me discipline and resilience. Now I'm ready to invest that discipline into a team with a goal worth fighting for.",
+      "programming": " programming.",
+      "code": "code"
     }
   }
 }
