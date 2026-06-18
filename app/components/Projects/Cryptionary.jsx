@@ -10,7 +10,7 @@ const Cryptionary = () => {
 
   return (
     <div className="flex flex-col justify-center">
-      <div className="h-fit mx-2 md:mx-20 pt-10 flex flex-col-reverse md:flex-row text-black dark:text-white">
+      <div className="h-fit mx-2 lg:mx-20 pt-10 flex flex-col-reverse md:flex-row text-black dark:text-white">
         <a
           href="https://cryptionary.hosein.dev"
           target="_blank"
@@ -25,8 +25,7 @@ const Cryptionary = () => {
           />
         </a>
         <div>
-          <h1 className="pb-6 text-2xl md:text-4xl mx-10">
-            {/* className="w-70 md:w-120 pb-5 ml-3 md:pb-8 text-2xl md:text-4xl" */}
+          <h1 className="pb-6 text-2xl md:text-4xl mx-10 duration-800">
             <a
               target="_blank"
               href="https://cryptionary.hosein.dev"
@@ -34,7 +33,6 @@ const Cryptionary = () => {
             >
               {t("projects.centerpiece.title")}
               <svg
-                xmlns="http://www.w3.org/2000/svg"
                 className="size-3 md:size-4 inline -mt-8"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -51,13 +49,13 @@ const Cryptionary = () => {
             : <br className="md:hidden" />
             {t("projects.centerpiece.postTitle")}{" "}
           </h1>
-          <p className="mx-5 md:mx-10 md:w-110">
+          <p className="mx-5 text-sm md:text-xl md:mx-10 md:w-110 duration-800">
             {t("projects.centerpiece.description")} <br />
             {t("projects.centerpiece.srcTitle")}:{" "}
             <a
               href="https://github.com/Hosein-rad/Cryptionary"
               target="_blank"
-              className="underline text-blue-700 dark:text-blue-200"
+              className="underline text-blue-700 dark:text-blue-200 duration-1000"
             >
               {t("projects.centerpiece.sourceCode")}
             </a>
@@ -66,29 +64,34 @@ const Cryptionary = () => {
       </div>
 
       {/* the features dropdown */}
-      <div className="h-fit mx-3 md:mx-30 pb-5 flex flex-col text-black dark:text-white">
+      <div className="h-fit mx-3 md:mx-10 lg:mx-30 pb-5 flex flex-col text-black dark:text-white duration-500">
         <div
           onClick={() => setMoreText(!moreText)}
-          className="md:w-fit mx-5 md:mx-10 flex items-center justify-center cursor-pointer hover:underline rounded-2xl"
+          className="md:w-fit mx-5 md:mx-10 flex items-center justify-center cursor-pointer hover:underline rounded-2xl text-sm md:text-xl"
         >
           <p className="pt-4 font-bold text-nowrap">
             {t("projects.centerpiece.featuresTitle")} :
           </p>
-          <Image
-            src="/svgs/arrow-l.svg"
-            alt="arrow"
-            width={40}
-            height={40}
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 6 9"
+            fill="#000"
+            xmlns="http://www.w3.org/2000/svg"
             className={`p-1 pr-1.5 mx-5 mt-3 ${
               moreText ? "rotate-90" : "-rotate-90"
             } size-5 bg-white rounded-full duration-300`}
-          />
+          >
+            <path
+              d="M4.97172 8.65283C5.15999 8.65283 5.32735 8.59007 5.45287 8.46456C5.72482 8.21352 5.72482 7.77421 5.45287 7.52317L2.58688 4.63627L5.45287 1.77028C5.72482 1.51924 5.72482 1.07993 5.45287 0.828896C5.20183 0.556941 4.76252 0.556941 4.51148 0.828896L1.16435 4.17603C0.89239 4.42707 0.89239 4.86638 1.16435 5.11742L4.51148 8.46456C4.637 8.59007 4.80436 8.65283 4.97172 8.65283Z"
+              fill="#000"
+            ></path>
+          </svg>
         </div>
-
         {/* Collapsible grid wrapper */}
         <div className={`collapsible-grid ${moreText ? "open" : ""}`}>
           <div>
-            <ul className="pt-2 mx-5 px-5 md:px-10 md:mx-20 list-disc text-sm md:text-[16px] space-y-2">
+            <ul className="pt-2 px-5 md:px-[3dvw] list-disc text-sm md:text-lg space-y-2 duration-500">
               <li>
                 <b>{t("projects.centerpiece.featuresList.1.title")}</b> :{" "}
                 {t("projects.centerpiece.featuresList.1.body")}

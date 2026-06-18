@@ -17,7 +17,7 @@
   },
   "projects": {
     "centerpiece": {
-      "heading": "Centerpiece",
+      "heading": "Main Work",
       "title": "Cryptionary",
       "postTitle": "Real-time Cryptocurrency Dashboard",
       "description": "This project is a dynamic cryptocurrency tracking website developed using React.js and TailwindCSS. It's an actively evolving project with a roadmap for incorporating advanced features and styles.",
@@ -43,12 +43,12 @@
       "heading": "other projects",
       "calc": {
         "description": "Mini Calculator",
-        "days": "3 days",
+        "tech": "JS",
         "heading": "Calculator"
       },
       "dots": {
         "description": "Dots & Boxes",
-        "days": "2 days",
+        "tech": "JS",
         "heading": "Dots & Boxes",
         "red": "Red",
         "blue": "Blue",
@@ -57,7 +57,11 @@
         "draw": "DRAW!",
         "again": "play again?"
       },
-      "github": { "description": "Everything else...", "days": "day 1" }
+      "fitshow-coded": { "description": "A gym website", "tech": "HTML - CSS" },
+      "fitshow-wp": { "description": "A gym website", "tech": "Wordpress" },
+      "horam": { "description": "cloned HoramGallery.ir", "tech": "Wordpress" },
+      "sign": { "description": "Sign-in/up Demo", "tech": "Next - MySQL" },
+      "github": { "description": "Everything else...", "tech": "GitHub" }
     }
   },
   "about": {
@@ -91,6 +95,16 @@
       "12": "I got this far on my own. It taught me discipline and resilience. Now I'm ready to invest that discipline into a team with a goal worth fighting for.",
       "programming": " programming.",
       "code": "code"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": { "1": "Got something in mind?", "2": "Let’s talk." },
+    "form": {
+      "name": "Name:",
+      "email": "E-mail:",
+      "message": "Message:",
+      "send": "Send Message"
     }
   }
 }

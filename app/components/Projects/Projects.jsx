@@ -13,12 +13,11 @@ const Projects = () => {
       id="projects"
       className="h-fit pt-15 md:pt-25 bg-sky-200 dark:bg-sky-950 flex flex-col items-center "
     >
-      <h2 className="w-full px-6 md:px-20 pb-2 md:pb-5 text-black dark:text-white text-center text-5xl md:text-7xl border-white dark:border-black border-b-4 mask-x-from-85% ">
+      <h2 className="w-full px-6 md:px-20 pb-2 md:pb-5 text-black dark:text-white text-center text-5xl md:text-7xl border-white dark:border-black border-b-4 mask-x-from-85% duration-500">
         {t("projects.centerpiece.heading")}
       </h2>
       <Cryptionary />
-      {/* <div className="w-4/5 %"></div> */}
-      <h2 className="w-full px-6 md:px-20 py-2 md:py-5 text-black dark:text-white text-center text-4xl md:text-6xl border-white dark:border-black border-t-6 border-dotted mask-x-from-95">
+      <h2 className="w-full px-6 md:px-20 py-5 text-black dark:text-white text-center text-4xl md:text-6xl border-white dark:border-black border-t-6 border-dotted mask-x-from-95 duration-500">
         {t("projects.other.heading")}
       </h2>
       <Other />

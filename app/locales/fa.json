@@ -43,12 +43,12 @@
       "heading": "پروژه‌های دیگر",
       "calc": {
         "description": "‌ماشین‌حساب کوچک",
-        "days": "3 روز",
+        "tech": "HTML - CSS - JS",
         "heading": "ماشین‌حساب"
       },
       "dots": {
         "description": "نقطه‌خط",
-        "days": "2 روز",
+        "tech": "HTML - CSS - JS",
         "heading": "نقطه‌خط",
         "red": "قرمز",
         "blue": "آبی",
@@ -57,7 +57,11 @@
         "draw": "مساوی!",
         "again": "دوباره بازی کنید؟"
       },
-      "github": { "description": "همه چیزای دیگه...", "days": "روز 1" }
+      "fitshow-coded": { "description": "سایت باشگاهی", "tech": "HTML - CSS" },
+      "fitshow-wp": { "description": "سایت باشگاهی", "tech": "وردپرس" },
+      "horam": { "description": "کلون HoramGallery.ir", "tech": "وردپرس" },
+      "sign": { "description": "ثبت‌نام/ورود دمو", "tech": "Next - MySQL" },
+      "github": { "description": "همه کارها...", "tech": "گیت‌هاب" }
     }
   },
   "about": {
@@ -91,6 +95,16 @@
       "12": "تا اینجای راه را تنهایی آمده‌ام. این مسیر به من استقامت و تلاش منظم یاد داد. حالا آماده‌ام همین تلاش را در تیمی با هدفی که ارزش جنگیدن دارد، به کار بگیرم.",
       "programming": " برنامه‌نویسی.",
       "code": "code"
+    }
+  },
+  "contact": {
+    "title": "تماس",
+    "subtitle": { "1": "ایده یا پروژه‌ای دارید؟", "2": "منتظر پیامتان هستم." },
+    "form": {
+      "name": "نام:",
+      "email": "ایمیل:",
+      "message": "پیام:",
+      "send": "ارسال پیام"
     }
   }
 }

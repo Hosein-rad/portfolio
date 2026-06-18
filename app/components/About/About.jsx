@@ -50,14 +50,21 @@ const About = () => {
         >
           {createPortal(
             <div className="fixed inset-0 mx-5 md:mx-30 my-5 md:my-10 backdrop-brightness-20 backdrop-blur-2xl text-white animate-open-portal origin-center overflow-hidden border-y-20 border-black/50 rounded-4xl leading-relaxed z-51">
-              <Image
-                src="/svgs/close.svg"
-                alt="close btn"
+              <svg
+                onClick={() => setOpenStory(() => false)}
                 width={30}
                 height={30}
+                viewBox="0 0 40 40"
+                fill="none"
                 className="absolute right-0 mr-5 size-10 border border-white rounded-full bg-black opacity-60 hover:opacity-100 hover:bg-red-600 hover:rotate-360 cursor-pointer duration-500"
-                onClick={() => setOpenStory(() => false)}
-              />
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M21.1452 20.0004L27.9852 13.1604C28.3119 12.8354 28.3119 12.307 27.9852 11.982C27.6602 11.657 27.1336 11.657 26.8069 11.982L20.0002 18.787L13.1936 11.982C12.8686 11.657 12.3419 11.657 12.0152 11.982C11.6902 12.307 11.6902 12.8354 12.0152 13.1604L18.8569 20.0004L12.0152 26.8404C11.6902 27.167 11.6902 27.6937 12.0152 28.0204C12.1786 28.182 12.3919 28.2637 12.6052 28.2637C12.8186 28.2637 13.0319 28.182 13.1936 28.0204L20.0002 21.2137L26.8069 28.0204C26.9702 28.182 27.1836 28.2637 27.3969 28.2637C27.6102 28.2637 27.8236 28.182 27.9852 28.0204C28.3119 27.6937 28.3119 27.167 27.9852 26.8404L21.1452 20.0004Z"
+                  fill="white"
+                ></path>
+              </svg>
               <div className="h-full py-12 md:py-15 px-3 md:px-20 text-inherit md:text-justify text-sm md:text-2xl overflow-y-scroll scroll-hidden space-y-3">
                 <p className="indent-3">{t("about.myStory.1")}</p>
                 <p className="inline-block my-3 text-gray-300/90 indent-3 italic">
@@ -85,8 +92,9 @@ const About = () => {
                 </p>
                 <p className="indent-3">{t("about.myStory.10")}</p>
 
-                <p className="inline-block mt-2 p-3 md:p-7 bg-gray-900 rounded-xl shadow-lg indent-4">
+                <p className="inline-block mt-2 p-3 md:p-7 bg-gray-900 rounded-xl shadow-lg">
                   {t("about.myStory.11")}
+                  <br />
                   {t("about.myStory.12")}
                 </p>
               </div>
@@ -95,18 +103,18 @@ const About = () => {
           )}
         </div>
       )}
-      <h1 className="w-fit px-20 py-3 text-black dark:text-white text-center text-4xl md:text-6xl border-white dark:border-black border-b-4 mask-x-from-85%">
+      <h1 className="w-fit px-20 py-3 text-black dark:text-white text-center text-4xl md:text-6xl text-nowrap border-white dark:border-black border-b-4 mask-x-from-85% duration-500">
         {t("about.title")}
       </h1>
       <span
         dir="ltr"
-        className="w-full block mt-5 text-lg md:text-2xl text-center font-normal"
+        className="w-full block mt-5 text-lg md:text-2xl text-center font-normal duration-500"
       >
-        <span className="text-cyan-700 dark:text-cyan-200">
+        <span className="text-cyan-700 dark:text-cyan-200 duration-500">
           {t("about.subtitle1")}
         </span>{" "}
         <span className="hidden md:inline">|</span>
-        <span className="text-fuchsia-700 dark:text-fuchsia-200 text-nowrap">
+        <span className="text-fuchsia-700 dark:text-fuchsia-200 text-nowrap duration-500">
           {" "}
           {t("about.subtitle2")}
         </span>{" "}
@@ -153,7 +161,7 @@ const About = () => {
         </div>
 
         {/* Short introduction section */}
-        <div className="md:w-[70%] mt-3 mx-2 md:mt-14 md:text-xl">
+        <div className="md:w-[70%] mt-3 px-2 md:mt-14 md:text-xl duration-500">
           <p>
             <b>{t("about.stack1.title")}</b>: {t("about.stack1.text")}
             <br />

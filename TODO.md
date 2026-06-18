@@ -1,5 +1,8 @@
-## dots & boxes :
-  - each line can be selected more than once, set it disabled after one click.
-  - Read the ai developed code, see the improvements and re-make in a React way
-  - shadow for the carousel items hover
-  - bg search / selection
+- each line can be selected more than once, set it disabled after one click.
+- Read the ai developed code in dots & boxes (commented), see the improvements and re-make in a React way
+- shadow for the carousel items hover
+- bg search / selection
+- create new LinkedIn
+- shadow to cards
+- ** create a Card component for the 'other' projects **
+- responsiveness: on Ipad Air - cryptionary (Image) has a size issue AND 'Contact' height issue

@@ -19,7 +19,7 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
+    // "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
     }
@@ -30,7 +30,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
-, "app/components/Projects/dots-boxes/GameBoard.jsx"  ],
+    "**/*.mts",
+    "app/components/Projects/dots-boxes/GameBoard.jsx"
+  ],
   "exclude": ["node_modules"]
 }
