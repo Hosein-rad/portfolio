@@ -3,22 +3,25 @@
 import { useTranslation } from "@/app/hooks/useTranslation";
 
 function Language() {
-  const { language, setLanguage } = useTranslation(); // ← global state from context
+  const { language, setLanguage } = useTranslation();
 
   return (
-    <div className="my-auto md:mx-2 bg-white border border-white text-black text-xs md:text-sm size-8 md:size-11 text-center rounded-full duration-500">
+    <div
+      className="relative flex items-center justify-center md:mx-2 bg-white text-black text-xs md:text-xl size-6 md:size-10 rounded-full hover:bg-sky-200 cursor-pointer duration-500"
+      onClick={() =>
+        language === "fa" ? setLanguage("en") : setLanguage("fa")
+      }
+    >
       <div
-        onClick={() => setLanguage("en")}
-        className={`h-1/2 py-0.5 rounded-t-full hover:text-sky-700 text-black hover:underline cursor-pointer ${
-          language == "en" ? "bg-sky-200 dark:bg-sky-300" : ""
+        className={`absolute size-full flex items-center justify-center ${
+          language == "en" ? "opacity-0" : "opacity-100"
         } duration-300`}
       >
-        en
+        EN
       </div>
       <div
-        onClick={() => setLanguage("fa")}
-        className={`h-1/2 py-0.5 rounded-b-full hover:text-sky-700 hover:underline cursor-pointer ${
-          language == "fa" ? "bg-sky-300" : ""
+        className={`absolute pt-1 size-full flex items-center justify-center ${
+          language == "fa" ? "opacity-0" : "opacity-100"
         } duration-300`}
       >
         فا

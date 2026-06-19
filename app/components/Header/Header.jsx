@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <nav
       dir="ltr"
-      className="w-full md:w-4/5 h-[4em] md:mt-[1em] px-2 flex text-black dark:text-white border-3 border-white dark:border-black justify-between items-center text-xs md:text-xl font-bold rounded-full bg-sky-300 dark:bg-gray-900 z-10 sticky top-1 duration-300"
+      className="w-full md:w-4/5 h-[4em] md:mt-[1em] px-2 flex text-black dark:text-white justify-between items-center text-xs md:text-xl font-bold rounded-full bg-sky-300/90 dark:bg-gray-900/90 z-10 sticky top-1 duration-300"
     >
       <Indicator />
       <Language />

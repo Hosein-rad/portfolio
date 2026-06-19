@@ -104,7 +104,11 @@
       "name": "Name:",
       "email": "E-mail:",
       "message": "Message:",
-      "send": "Send Message"
+      "send": "Send Message",
+      "sending": "Sending...",
+      "sent": "Sent! ✅",
+      "sendSuccess": "Message sent successfully!",
+      "sendError": "Something went wrong"
     }
   }
 }

@@ -22,7 +22,7 @@ function DarkMode() {
             toggleDark();
             setDarkMode(!darkMode);
           }}
-          className="my-auto md:mx-2 size-8 md:size-11 flex justify-center items-center rounded-full bg-sky-400 shadow-sky-400 md:shadow-[0_0_10px_7px] shadow-[0_0_7px_3px] hover:scale-120 hover:rotate-90 duration-300"
+          className="my-auto md:mx-2 size-6 md:size-9 flex justify-center items-center rounded-full bg-sky-400 shadow-sky-400 md:shadow-[0_0_10px_7px] shadow-[0_0_7px_3px] hover:scale-120 hover:rotate-90 duration-300"
         >
           <svg viewBox="0 0 20 20" fill="white" className="p-1 cursor-pointer">
             <path
@@ -38,7 +38,7 @@ function DarkMode() {
             toggleDark();
             setDarkMode(!darkMode);
           }}
-          className="my-auto md:mx-2 size-8 md:size-11 flex justify-center items-center rounded-full bg-sky-700 shadow-sky-800 shadow-[0_0_12px_5px] hover:scale-120 hover:rotate-90 duration-300"
+          className="my-auto md:mx-2 size-8 md:size-8 flex justify-center items-center rounded-full bg-sky-700 shadow-sky-800 shadow-[0_0_12px_5px] hover:scale-120 hover:rotate-90 duration-300"
         >
           <svg viewBox="0 0 16 16" className="p-1 cursor-pointer">
             <path
