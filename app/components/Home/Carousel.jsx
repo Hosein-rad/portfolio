@@ -2,9 +2,8 @@ import CarouselItem from "./CarouselItem";
 
 const Carousel = () => {
   return (
-    <div className="relative w-4/5 bg-transparent flex mask-x-from-60% mask-y-from-90% overflow-hidden group">
-      {/* Add min-w-max and flex-nowrap to keep everything in one row */}
-      <div className="flex min-w-max h-25 flex-nowrap animate-marquee">
+    <div className="relative mt-2 w-4/5 bg-transparent flex mask-x-from-60% mask-y-from-90% overflow-hidden group">
+      <div className="flex min-w-max h-30 flex-nowrap animate-marquee">
         <CarouselItem />
         <CarouselItem />
       </div>

@@ -11,8 +11,10 @@
       "title": "Hosein",
       "postTitle": "a web developer"
     },
+    "resume": "Download resume",
+    "work": "View my Work",
     "stack": {
-      "title": "Technologies I work with :"
+      "title": "TECHNOLOGIES I WORK WITH:"
     }
   },
   "projects": {

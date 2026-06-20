@@ -172,7 +172,7 @@ const Indicator = () => {
 
   return (
     <div
-      className="absolute rounded-[100%] h-7 md:h-12 bg-white dark:bg-black z-11 duration-500"
+      className="absolute rounded-[100%] h-7 md:h-12 bg-white dark:bg-gray-700 z-11 duration-500"
       style={{
         left: pos.left - 15,
         width: pos.width + 25,

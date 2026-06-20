@@ -32,6 +32,6 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts",
     "app/components/Projects/dots-boxes/GameBoard.jsx"
-  ],
+, "app/components/ui/text-hover-effect.jsx", "app/components/ui/dotted-glow-background.jsx", "app/components/ui/canvas-reveal-effect.jsx", "app/components/ui/glowing-stars.tsx"  ],
   "exclude": ["node_modules"]
 }

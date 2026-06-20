@@ -26,18 +26,18 @@ const CarouselItem = () => {
         return (
           <div
             key={item.name}
-            className="relative mx-[1em] my-auto rounded-md hover:scale-110 duration-300"
+            className="relative md:mx-2 flex justify-center items-center rounded-md hover:scale-110 duration-300"
           >
             <Image
               alt={item.name}
               src={item?.url}
               width={40}
               height={40}
-              className="size-7 md:size-10 mx-3 md:mx-[1.5em] rounded-md z-100"
+              className="size-9 md:size-14 mx-3 md:mx-[1.5em] rounded-md z-100"
             />
-            <button className="absolute flex justify-center inset-0 -left-4 md:left-1 -mt-6 size-20 md:size-20 text-center text-black dark:text-white opacity-0 hover:opacity-100 focus:opacity-100 duration-300 z-110">
+            <p className="absolute top-2 size-full text-center text-black dark:text-white opacity-0 hover:opacity-100 active:opacity-100 duration-300 z-110">
               {item.name}
-            </button>
+            </p>
           </div>
         );
       })}

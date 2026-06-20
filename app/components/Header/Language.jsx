@@ -7,7 +7,7 @@ function Language() {
 
   return (
     <div
-      className="relative flex items-center justify-center md:mx-2 bg-white text-black text-xs md:text-xl size-6 md:size-10 rounded-full hover:bg-sky-200 cursor-pointer duration-500"
+      className="size-5 md:pt-1 md:size-8 relative flex items-center justify-center md:mx-2 bg-sky-700 shadow-sky-800 dark:bg-sky-400 dark:shadow-sky-400  md:shadow-[0_0_12px_3px] shadow-[0_0_7px_3px] text-white text-[10px] md:text-xl rounded-full hover:scale-120 cursor-pointer duration-300"
       onClick={() =>
         language === "fa" ? setLanguage("en") : setLanguage("fa")
       }
