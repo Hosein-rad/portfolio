@@ -12,13 +12,15 @@ const Home = () => {
   return (
     <div id="hero">
       <HeroHighlight></HeroHighlight>
-      <div className="w-full mt-7 md:mt-20 md:mb-15 h-[13em] text-black dark:text-white flex flex-col items-center justify-center duration-300">
+
+      {/* Hero - title */}
+      <div className="w-full mt-7 md:mt-20 mb-10 md:mb-15 h-[13em] text-black dark:text-white flex flex-col items-center justify-center duration-300">
         <div className="flex">
           <div className="h-40 md:text-5xl flex items-center justify-center">
             {t("hero.title.preTitle")}
           </div>
-          <h1 className="mt-15 font-['baloo-semibold']">
-            <p className="-mx-15 -mb-8 h-50 flex items-center justify-center text-9xl">
+          <h1 className="mt-5 md:mt-15 font-['baloo-semibold']">
+            <p className="-mx-15 -mb-15 md:-mb-8 h-50 flex items-center justify-center text-7xl lg:text-9xl">
               <CanvasText
                 text={t("hero.title.title")}
                 backgroundClassName="bg-blue-600"

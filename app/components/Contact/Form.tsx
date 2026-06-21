@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslation } from "@/app/hooks/useTranslation";
+import { BorderBeam } from "../ui/border-beam";
 
 export default function Form() {
   const { t } = useTranslation();
@@ -19,7 +20,7 @@ export default function Form() {
     setErrorMsg("");
     // "/send-email.php"
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/send-email.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -298,6 +299,7 @@ export default function Form() {
           {t("contact.form.sendSuccess")}
         </p>
       )}
+      <BorderBeam duration={8} size={200} />
     </form>
   );
 }

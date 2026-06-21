@@ -1,22 +1,22 @@
 "use client";
 
-import { useState } from "react";
+// import { useState } from "react";
+import { AnimatedThemeToggler } from "../ui/animated-theme-toggler";
 
 function DarkMode() {
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("theme") !== "dark";
-    }
-    return true;
-  });
+  // const [darkMode, setDarkMode] = useState(() => {
+  //   if (typeof window !== "undefined") {
+  //     return localStorage.getItem("theme") !== "dark";
+  //   }
+  //   return true;
+  // });
 
-  const toggleDark = () => {
-    document.documentElement.classList.toggle("dark");
-  };
+  // const toggleDark = () => {
+  //   document.documentElement.classList.toggle("dark");
+  // };
 
-  return (
-    <>
-      {darkMode ? (
+  {
+    /* {darkMode ? (
         <div
           onClick={() => {
             toggleDark();
@@ -47,8 +47,12 @@ function DarkMode() {
             ></path>
           </svg>
         </div>
-      )}
-    </>
+      )} */
+  }
+  return (
+    <div className="my-auto md:mx-2 size-6 md:size-8 flex justify-center items-center rounded-full dark:bg-sky-400 bg-sky-700 dark:shadow-sky-400 shadow-sky-800 md:shadow-[0_0_12px_5px] shadow-[0_0_7px_3px] hover:scale-120 hover:-rotate-90 duration-300 text-white cursor-pointer">
+      <AnimatedThemeToggler className="cursor-pointer" />
+    </div>
   );
 }
 

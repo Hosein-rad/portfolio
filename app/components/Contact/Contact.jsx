@@ -87,6 +87,7 @@ const Contact = () => {
                     </g>
                   </g>
                 </g>
+                
               </svg>
             </a>
             {/* LinkedIn Icon and Link */}

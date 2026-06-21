@@ -35,7 +35,7 @@ const CarouselItem = () => {
               height={40}
               className="size-9 md:size-14 mx-3 md:mx-[1.5em] rounded-md z-100"
             />
-            <p className="absolute top-2 size-full text-center text-black dark:text-white opacity-0 hover:opacity-100 active:opacity-100 duration-300 z-110">
+            <p className="absolute top-4 md:top-2 size-full text-center text-black dark:text-white opacity-0 hover:opacity-100 active:opacity-100 duration-300 z-110">
               {item.name}
             </p>
           </div>

@@ -3,6 +3,7 @@
 - shadow for the carousel items hover
 - bg search / selection
 - ** create new LinkedIn AND finish Github profile **
+- ** create Resume and LINK it to button **
 - shadow to cards
 - ** create a Card component for the 'other' projects **
 - responsiveness: on Ipad Air - cryptionary (Image) has a size issue AND 'Contact' height issue
