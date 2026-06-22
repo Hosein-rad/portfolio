@@ -33,14 +33,14 @@ const Darsbar = () => {
           <p className="mx-5 text-sm md:text-[16px] md:pl-15 md:text-justify">
             Darsbar is a comprehensive dashboard designed to streamline the
             study process for students and educators. This project facilitates
-            user <u>sign-in and sign-up</u> for both students and teachers,
-            utilizing <b>PostgreSQL</b> for database management with
-            <i> Prisma ORM</i>. <br />
-            Developed with <i>Next.js</i>, Darsbar integrates
-            <b> cloud storage </b>
-            capabilities, allowing data uploads via a <u>
+            user sign-in and sign-up for both students and teachers,
+            utilizing PostgreSQL for database management with
+             Prisma ORM.
+            Developed with Next.js, Darsbar integrates
+             cloud storage 
+            capabilities, allowing data uploads via a 
               dedicated subdomain
-            </u>{" "}
+            {" "}
             (files.darsbar.ir). While development has been temporarily paused
             due to{" "}
             <i className="text-red-900 dark:text-red-200">

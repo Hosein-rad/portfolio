@@ -1,9 +1,9 @@
 "use client";
 
-import Cryptionary from "./Cryptionary";
-import Other from "./Other";
+// import Cryptionary from "./Cryptionary";
+// import Other from "./Other";
 import { useTranslation } from "@/app/hooks/useTranslation";
-import OtherStuff from "./OtherStuff";
+import MyWork from "./MyWork";
 // import Darsbar from "./Darsbar";
 
 const Projects = () => {
@@ -21,8 +21,8 @@ const Projects = () => {
       <h2 className="w-full px-6 md:px-20 py-5 text-black dark:text-white text-center text-4xl md:text-6xl border-white dark:border-black border-t-6 border-dotted mask-x-from-95 duration-500">
         {t("projects.other.heading")}
       </h2> */}
-      <OtherStuff />
-      <Other />
+      <MyWork />
+      {/* <Other /> */}
     </div>
   );
 };

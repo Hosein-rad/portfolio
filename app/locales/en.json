@@ -14,56 +14,65 @@
     "resume": "Download resume",
     "work": "View my Work",
     "stack": {
-      "title": "TECHNOLOGIES I WORK WITH:"
+      "title": "🛠️TOOLS I WORK WITH:"
     }
   },
   "projects": {
     "centerpiece": {
-      "heading": "Main Work",
-      "title": "Cryptionary",
-      "postTitle": "Real-time Cryptocurrency Dashboard",
+      "heading": "Projects",
+      "title": "✨Cryptionary: Real-time Cryptocurrency Dashboard, Modern and Reliable",
+      "postTitle": "✔️React 19.1 - Tailwind/vite 4.1  🔌integrating CoinGecko API  🔍Quick search  🦋Beautiful UI  ⚡Optimized and Fast 🔶Deployed on cPanel",
       "description": "This project is a dynamic cryptocurrency tracking website developed using React.js and TailwindCSS. It's an actively evolving project with a roadmap for incorporating advanced features and styles.",
       "srcTitle": "Source code",
       "sourceCode": "github.com/Hosein-rad/Cryptionary",
-      "featuresTitle": "Key Features & Technologies",
+      "featuresTitle": "💡Key Features & Technologies",
       "featuresList": {
         "1": {
-          "title": "Data Integration",
+          "title": "🌐Data Integration",
           "body": "Leverages APIs from reputable sources like CoinGecko and Coinpaprika to fetch real-time cryptocurrency data, including prices, market capitalization, and trading volumes."
         },
         "2": {
-          "title": "Interactive UI/UX",
+          "title": "🎨Interactive UI/UX",
           "body": "Implements engaging user interface elements such as animated gradient transitions, a captivating hover effect with mouse tracking text, and a smooth sliding sidebar for enhanced navigation and user experience."
         },
         "3": {
-          "title": "Resilience in Restricted Environments",
+          "title": "💪Resilience in Restricted Environments",
           "body": "Designed to function effectively despite potential internet sanctions. To demonstrate full functionality, static data is utilized, ensuring all features are showcased even when live data fetching is not feasible."
         }
       }
     },
     "other": {
-      "heading": "other projects",
-      "calc": {
-        "description": "Mini Calculator",
-        "tech": "JS",
-        "heading": "Calculator"
+      "darsbar": {
+        "title": "📚Darsbar.ir: Student & Teacher Darshboard",
+        "description": "🟢Currently Building. 🔒Prisma, NextAuth, Protected routes. ☁️Cloud storage. 🎯solving a real-world problem",
+        "disc1": "Darsbar is a role-based education platform designed to simplify the learning experience for both students and teachers.",
+        "disc2": "Built with Next.js, React, TypeScript, Prisma, PostgreSQL, and Supabase - the platform features 🛡️secure authentication, 🔑protected routes, 📋dedicated dashboards for different user roles, and 📂cloud file storage through a separate subdomain, 🌈Motion and Shadcn for UI.",
+        "disc3": "✏️The project focuses on solving real-world challenges in educational workflows by combining clean user interfaces with a scalable architecture. 🚧Darsbar is currently in active development, with future plans including assignment management, course organization, and richer collaboration features."
       },
-      "dots": {
-        "description": "Dots & Boxes",
-        "tech": "JS",
-        "heading": "Dots & Boxes",
-        "red": "Red",
-        "blue": "Blue",
-        "wRed": "RED WINS!",
-        "wBlue": "BLUE WINS!",
-        "draw": "DRAW!",
-        "again": "play again?"
+      
+      "portfolio": {
+        "title": "🌟My Portfolio - This website!",
+        "description": "📧Secure seemless Form. ⚙️Customized Shadcn. 📐Fully Responsive. 🌍Bilingual - i18n. 🌙Dark-Mode. 🔶Deployed on cPanel",
+        "disc1": "👨🏻‍💻Built with Next.js 15, Tailwind CSS v4 and Typescrypt v5. The site adapts seamlessly to any screen size, and a smooth Dark-Mode ensures a positive user experience.",
+        "disc2": "友 Bilingual and fully accessible. Automatic right‑to‑left layout switching and persistent language memory.",
+        "disc3": "💌A working and fully secure E-mail form. Click the contact button, type a message, and it lands in my inbox—with. Unless you're a robot ofc :)"
       },
-      "fitshow-coded": { "description": "A gym website", "tech": "HTML - CSS" },
-      "fitshow-wp": { "description": "A gym website", "tech": "Wordpress" },
-      "horam": { "description": "cloned HoramGallery.ir", "tech": "Wordpress" },
-      "sign": { "description": "Sign-in/up Demo", "tech": "Next - MySQL" },
-      "github": { "description": "Everything else...", "tech": "GitHub" }
+
+      "leekoo": {
+        "title": "Leekoo - Educational & Entertainment Center",
+        "description": "🤝Real Client Project. 🛒Online Store. 🖼️Dynamic Gallery. 🎯End-to-End Delivery. ✨Interactive Homepage.",
+        "disc1": "👥Collaborated directly with the client to gather requirements, iterate on ideas, and deliver a website aligned with their vision — resulting in strong client satisfaction.",
+        "disc2": "🎨Designed and managed extensive content, including courses, galleries, and interactive sections, ensuring a cohesive and engaging user experience.",
+        "disc3": "⚡Features a dynamic gallery, course pages, an integrated online store, and a highly interactive homepage. Built using modern CMS technologies and custom components."
+      },
+
+      "signupLogin": {
+        "title": "SignUp/Login System - Next.js + MySQL",
+        "description": "🔐Full‑Stack Auth. 🗄️Remote MySQL. 🎨Tailwind UI. 🖥️Serverless API. ▲Deployed on Vercel.",
+        "disc1": "🔒Implemented secure authentication with bcryptjs password hashing, client‑side validation, and server‑side duplicate checks for name/email.",
+        "disc2": "🔗Integrated a remote MySQL database (freesqldatabase.com) using mysql2 pool, overcoming deployment limitations by testing connectivity and adjusting index sizes.",
+        "disc3": "🎨Designed a polished, fully Persian right‑to‑left interface with Tailwind CSS, CSS animations, and a glass‑morphism landing page; ready for JWT/session extensions."
+      }
     }
   },
   "about": {

@@ -9,7 +9,6 @@ const CarouselItem = () => {
     { name: "JavaScript", url: "/images/Javascript.webp" },
     { name: "TailwindCSS", url: "/images/TailwindCSS.webp" },
     { name: "Figma", url: "/images/figma-icon.webp" },
-    { name: "Adobe Xd", url: "/images/adobeXD.webp" },
     { name: "TypeScript", url: "/images/typescript.webp" },
     { name: "React", url: "/images/React.webp" },
     { name: "Next.JS", url: "/images/NextJS.webp" },
@@ -18,6 +17,8 @@ const CarouselItem = () => {
     { name: "MySQL", url: "/images/mySQL.webp" },
     { name: "A.I", url: "/images/ai.webp" },
     { name: "Wordpress", url: "/images/wordpress.webp" },
+    { name: "Shadcn", url: "/images/shadcn.png" },
+    { name: "Illustrator", url: "/images/illu.webp" },
   ];
 
   return (

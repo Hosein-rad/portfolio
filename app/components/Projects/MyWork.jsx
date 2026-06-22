@@ -8,7 +8,7 @@ import CardTemp from "./CardTemp";
 import getCards from "./getCards";
 import { useTranslation } from "@/app/hooks/useTranslation";
 
-export default function OtherStuff() {
+export default function MyWork() {
   const { t } = useTranslation();
   const cards = getCards(t);
   const [active, setActive] = useState(null);
@@ -71,7 +71,7 @@ export default function OtherStuff() {
                     duration: 0.05,
                   },
                 }}
-                className="flex absolute top-2 right-2 items-center justify-center bg-white rounded-full h-6 w-6"
+                className="flex absolute top-2 right-2 items-center justify-center bg-white/60 rounded-full size-fit"
                 onClick={() => setActive(null)}
               >
                 <CloseIcon />
@@ -91,7 +91,7 @@ export default function OtherStuff() {
                   <div className="">
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
-                      className="font-bold text-neutral-700 dark:text-neutral-200"
+                      className="my-3 font-bold text-2xl text-neutral-700 dark:text-neutral-200"
                     >
                       {active.title}
                     </motion.h3>
@@ -102,15 +102,28 @@ export default function OtherStuff() {
                       {active.description}
                     </motion.p>
                   </div>
-
-                  <motion.a
-                    layoutId={`button-${active.title}-${id}`}
-                    href={active.ctaLink}
-                    target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
-                  >
-                    {active.ctaText}
-                  </motion.a>
+                  <div className="space-y-2">
+                    <motion.a
+                      layoutId={`button-${active.title}-${id}`}
+                      href={active.ctaLink}
+                      onClick={() => setActive(null)}
+                      target={active.ctaLink === "#" ? "" : "_blank"}
+                      className="flex items-center justify-center rounded-full bg-white size-10 hover:bg-sky-600 hover:text-white text-black mt-4 md:mt-0 duration-200 cursor-pointer shrink-0 group"
+                    >
+                      {active.ctaText}
+                    </motion.a>
+                    {active.ctaLink2 && (
+                      <motion.a
+                        layoutId={`button-${active.title}-${id}-2`}
+                        href={active.ctaLink2}
+                        onClick={() => setActive(null)}
+                        target={active.ctaLink2 === "#" ? "" : "_blank"}
+                        className="flex items-center justify-center rounded-full bg-white size-10 hover:bg-sky-600 hover:text-white text-black mt-4 md:mt-0 duration-200 cursor-pointer shrink-0 group"
+                      >
+                        {active.cta2Text}
+                      </motion.a>
+                    )}
+                  </div>
                 </div>
                 <div className="pt-4 relative px-4">
                   <motion.div
@@ -134,37 +147,25 @@ export default function OtherStuff() {
       {/* grid layout */}
       <div className="flex flex-col gap-4 w-4/5 min-h-40 px-20">
         {/* 1st row */}
-        <div className="w-full h-fit backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl text-nowrap">
+        <div className="self-center w-9/10 hover:w-full h-40 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl">
           <CardTemp card={cards[0]} setActive={setActive} id={id} />
         </div>
         {/* 2nd row */}
         <div className="flex gap-4">
-          <div className="self-end grow-2 hover:grow-4 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl text-nowrap">
+          <div className="h-40 flex-5 hover:flex-6 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl">
             <CardTemp card={cards[1]} setActive={setActive} id={id} />
           </div>
-          <div className="self-end grow hover:grow-2 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl text-nowrap">
+          <div className="h-40 flex-4 hover:flex-5 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl">
             <CardTemp card={cards[2]} setActive={setActive} id={id} />
           </div>
         </div>
         {/* 3rd row */}
         <div className="flex gap-4">
-          <div className="self-end grow hover:grow-2 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl text-nowrap">
+          <div className="h-40 flex-4 hover:flex-5 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl ">
             <CardTemp card={cards[3]} setActive={setActive} id={id} />
           </div>
-          <div className="self-end grow-2 hover:grow-4 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl text-nowrap">
+          <div className="h-40 flex-5 hover:flex-6 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl ">
             <CardTemp card={cards[4]} setActive={setActive} id={id} />
-          </div>
-        </div>
-        {/* 4th row */}
-        <div className="flex gap-4">
-          <div className="flex-1 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl grow hover:grow-2 hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl text-nowrap">
-            <CardTemp card={cards[5]} setActive={setActive} id={id} />
-          </div>
-          <div className="flex-1 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl grow hover:grow-2 hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl text-nowrap">
-            <CardTemp card={cards[6]} setActive={setActive} id={id} />
-          </div>
-          <div className="flex-1 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl grow hover:grow-2 hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl text-nowrap">
-            <CardTemp card={cards[7]} setActive={setActive} id={id} />
           </div>
         </div>
       </div>
@@ -187,20 +188,19 @@ export const CloseIcon = () => {
           duration: 0.05,
         },
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
       fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-4 w-4 text-black"
+      xmlns="http://www.w3.org/2000/svg"
+      className="size-10 rounded-full text-2xl text-black cursor-pointer hover:bg-red-600 hover:rotate-360 duration-500"
     >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M18 6l-12 12" />
-      <path d="M6 6l12 12" />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M21.1452 20.0004L27.9852 13.1604C28.3119 12.8354 28.3119 12.307 27.9852 11.982C27.6602 11.657 27.1336 11.657 26.8069 11.982L20.0002 18.787L13.1936 11.982C12.8686 11.657 12.3419 11.657 12.0152 11.982C11.6902 12.307 11.6902 12.8354 12.0152 13.1604L18.8569 20.0004L12.0152 26.8404C11.6902 27.167 11.6902 27.6937 12.0152 28.0204C12.1786 28.182 12.3919 28.2637 12.6052 28.2637C12.8186 28.2637 13.0319 28.182 13.1936 28.0204L20.0002 21.2137L26.8069 28.0204C26.9702 28.182 27.1836 28.2637 27.3969 28.2637C27.6102 28.2637 27.8236 28.182 27.9852 28.0204C28.3119 27.6937 28.3119 27.167 27.9852 26.8404L21.1452 20.0004Z"
+        fill="currentColor"
+      ></path>
     </motion.svg>
   );
 };
