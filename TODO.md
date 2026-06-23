@@ -7,3 +7,4 @@
 - shadow to cards
 - ** create a Card component for the 'other' projects **
 - responsiveness: on Ipad Air - cryptionary (Image) has a size issue AND 'Contact' height issue
+- a loading GIF

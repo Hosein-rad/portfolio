@@ -87,12 +87,11 @@ const Contact = () => {
                     </g>
                   </g>
                 </g>
-                
               </svg>
             </a>
             {/* LinkedIn Icon and Link */}
             <a
-              href="https://github.com/hosein-rad"
+              href="https://www.linkedin.com/in/hosein-rad-15a149419"
               target="_blank"
               rel="noopener noreferrer"
             >

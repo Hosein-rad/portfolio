@@ -17,12 +17,7 @@ const Projects = () => {
       <h2 className="w-full md:w-2/3 px-6 mb-10 md:px-20 pb-2 md:pb-5 text-black dark:text-white text-center text-5xl md:text-7xl border-white dark:border-black border-dotted border-b-8 mask-x-from-60% duration-500">
         {t("projects.centerpiece.heading")}
       </h2>
-      {/* <Cryptionary />
-      <h2 className="w-full px-6 md:px-20 py-5 text-black dark:text-white text-center text-4xl md:text-6xl border-white dark:border-black border-t-6 border-dotted mask-x-from-95 duration-500">
-        {t("projects.other.heading")}
-      </h2> */}
       <MyWork />
-      {/* <Other /> */}
     </div>
   );
 };

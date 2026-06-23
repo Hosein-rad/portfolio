@@ -48,12 +48,12 @@ export default function MyWork() {
       </AnimatePresence>
       <AnimatePresence>
         {active && typeof active === "object" ? (
-          <div className="fixed inset-0 grid place-items-center z-200">
+          <div className="fixed inset-x-auto inset-y-0 grid place-items-center w-[90dvw] z-200">
             {/* card item outer div */}
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="relative w-full max-w-125  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="relative w-9/10 md:w-full md:max-w-125  h-fit max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 rounded-3xl overflow-hidden"
             >
               {/* close Button */}
               <motion.button
@@ -82,7 +82,7 @@ export default function MyWork() {
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="w-auto mx-auto h-40 sm:h-60 md:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
               </motion.div>
 
@@ -91,13 +91,13 @@ export default function MyWork() {
                   <div className="">
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
-                      className="my-3 font-bold text-2xl text-neutral-700 dark:text-neutral-200"
+                      className="my-3 font-bold text-xl md:text-2xl text-neutral-700 dark:text-neutral-200"
                     >
                       {active.title}
                     </motion.h3>
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
-                      className="text-neutral-600 dark:text-neutral-400"
+                      className="text-neutral-600 dark:text-neutral-400 text-sm md:text-lg"
                     >
                       {active.description}
                     </motion.p>
@@ -108,7 +108,7 @@ export default function MyWork() {
                       href={active.ctaLink}
                       onClick={() => setActive(null)}
                       target={active.ctaLink === "#" ? "" : "_blank"}
-                      className="flex items-center justify-center rounded-full bg-white size-10 hover:bg-sky-600 hover:text-white text-black mt-4 md:mt-0 duration-200 cursor-pointer shrink-0 group"
+                      className="flex items-center justify-center rounded-full bg-white size-7 sm:size-10 hover:bg-sky-600 hover:text-white text-black mt-4 md:mt-0 duration-200 cursor-pointer shrink-0 group"
                     >
                       {active.ctaText}
                     </motion.a>
@@ -118,7 +118,7 @@ export default function MyWork() {
                         href={active.ctaLink2}
                         onClick={() => setActive(null)}
                         target={active.ctaLink2 === "#" ? "" : "_blank"}
-                        className="flex items-center justify-center rounded-full bg-white size-10 hover:bg-sky-600 hover:text-white text-black mt-4 md:mt-0 duration-200 cursor-pointer shrink-0 group"
+                        className="flex items-center justify-center rounded-full bg-white size-7 sm:size-10 hover:bg-sky-600 hover:text-white text-black mt-4 md:mt-0 duration-200 cursor-pointer shrink-0 group"
                       >
                         {active.cta2Text}
                       </motion.a>
@@ -131,7 +131,7 @@ export default function MyWork() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-neutral-600 text-xs md:text-sm lg:text-base h-40 md:h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400"
+                    className="text-neutral-600 text-sm lg:text-base h-fit pb-10 flex flex-col items-start gap-4 overflow-auto dark:text-neutral-400 scroll-hidden"
                   >
                     {typeof active.content === "function"
                       ? active.content()
@@ -145,26 +145,26 @@ export default function MyWork() {
       </AnimatePresence>
 
       {/* grid layout */}
-      <div className="flex flex-col gap-4 w-4/5 min-h-40 px-20">
+      <div className="flex flex-col gap-4 w-full md:w-4/5 min-h-40 px-3 sm:px-20">
         {/* 1st row */}
-        <div className="self-center w-9/10 hover:w-full h-40 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl">
+        <div className="self-center lg:w-9/10 hover:w-full lg:h-40 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl overflow-hidden">
           <CardTemp card={cards[0]} setActive={setActive} id={id} />
         </div>
         {/* 2nd row */}
-        <div className="flex gap-4">
-          <div className="h-40 flex-5 hover:flex-6 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl">
+        <div className="flex flex-col lg:flex-row gap-4">
+          <div className="lg:h-40 flex-5 hover:flex-6 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl overflow-hidden">
             <CardTemp card={cards[1]} setActive={setActive} id={id} />
           </div>
-          <div className="h-40 flex-4 hover:flex-5 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl">
+          <div className="lg:h-40 flex-4 hover:flex-5 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl overflow-hidden">
             <CardTemp card={cards[2]} setActive={setActive} id={id} />
           </div>
         </div>
         {/* 3rd row */}
-        <div className="flex gap-4">
-          <div className="h-40 flex-4 hover:flex-5 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl ">
+        <div className="flex flex-col lg:flex-row gap-4">
+          <div className="lg:h-40 flex-4 hover:flex-5 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl overflow-hidden ">
             <CardTemp card={cards[3]} setActive={setActive} id={id} />
           </div>
-          <div className="h-40 flex-5 hover:flex-6 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl ">
+          <div className="lg:h-40 flex-5 hover:flex-6 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl overflow-hidden ">
             <CardTemp card={cards[4]} setActive={setActive} id={id} />
           </div>
         </div>
@@ -193,7 +193,7 @@ export const CloseIcon = () => {
       viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="size-10 rounded-full text-2xl text-black cursor-pointer hover:bg-red-600 hover:rotate-360 duration-500"
+      className="size-7 sm:size-10 rounded-full text-2xl text-black cursor-pointer hover:bg-red-600 hover:rotate-360 duration-500"
     >
       <path
         fillRule="evenodd"
