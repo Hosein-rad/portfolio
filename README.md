@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌟 Personal Portfolio
 
-## Getting Started
+A modern, bilingual portfolio built to showcase my projects, my story, and the skills I've developed over **3 years of self-taught front-end development**.
 
-First, run the development server:
+This website isn't just a collection of links. It's a project in itself — designed and built from scratch with a strong focus on **responsiveness**, **accessibility**, **user experience**, and **attention to detail**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🌍 Fully bilingual (**English / Persian**)
+- ↔️ Automatic **RTL / LTR** layout switching
+- 🌙 Smooth Dark Mode with persistent preferences
+- 📧 Secure contact form with bot protection
+- 📐 Fully responsive design
+- ⚙️ Customized Shadcn/UI components
+- ✨ Motion animations and interactive UI elements
+- 🔶 Deployed on cPanel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+| Technology | Purpose |
+|------------|---------|
+| Next.js 15 | Framework |
+| React 19 | UI Library |
+| TypeScript 5 | Type Safety |
+| Tailwind CSS v4 | Styling |
+| Shadcn/UI | Components |
+| Motion | Animations |
+| i18n | Localization |
+| React Icons | Icons |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎯 Philosophy
 
-## Deploy on Vercel
+> I believe portfolios should demonstrate skills rather than simply claim them.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Every animation, layout, transition, and interaction in this website was an opportunity to learn something new and polish the details a little further.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The result is a portfolio that reflects how I approach software development:
+
+- Build things that feel good to use.
+- Sweat the details.
+- Keep learning.
+- Ship.
+
+---
+
+## 🚀 Live Demo
+
+[Visit the Website →](https://Hosein.dev)
+
+---
+
+## 👨🏻‍💻 About Me
+
+I'm **Hosein Rad**, a self-taught Front-End Developer based in Tehran, Iran.
+
+I specialize in building clean, responsive interfaces with **React**, **Next.js**, **Tailwind CSS**, and **TypeScript**.
+
+I'm currently looking for opportunities where I can contribute, learn from experienced engineers, and keep growing.
+
+---
+
+⭐ If you like the project, feel free to star the repository.
