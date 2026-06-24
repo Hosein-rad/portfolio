@@ -11,8 +11,8 @@
       "title": "Hosein",
       "postTitle": "a web developer"
     },
-    "resume": "Download resume",
-    "work": "View my Work",
+    "resume": "Download CV",
+    "work": "My Work",
     "stack": {
       "title": "🛠️TOOLS I WORK WITH:"
     }
@@ -49,7 +49,7 @@
         "disc2": "Built with Next.js, React, TypeScript, Prisma, PostgreSQL, and Supabase - the platform features 🛡️secure authentication, 🔑protected routes, 📋dedicated dashboards for different user roles, and 📂cloud file storage through a separate subdomain, 🌈Motion and Shadcn for UI.",
         "disc3": "✏️The project focuses on solving real-world challenges in educational workflows by combining clean user interfaces with a scalable architecture. 🚧Darsbar is currently in active development, with future plans including assignment management, course organization, and richer collaboration features."
       },
-      
+
       "portfolio": {
         "title": "🌟My Portfolio - This website!",
         "description": "📧Secure seemless Form. ⚙️Customized Shadcn. 📐Fully Responsive. 🌍Bilingual - i18n. 🌙Dark-Mode. 🔶Deployed on cPanel",
@@ -81,15 +81,14 @@
     "subtitle2": "React, Next.js, Tailwind",
     "stack1": {
       "title": "Core stack",
-      "text": "React, Next.js, Tailwind CSS, TypeScript, JavaScript (ES6+), CSS3, HTML5"
+      "text": "React | Next.js  | Tailwind CSS | Shadcn UI | Framer Motion | HTML/CSS/JS"
     },
     "stack2": {
       "title": "Familiar with",
-      "text": "Database fundimentals, Figma, Git/GitHub, Vercel , cPanel, DNS & deployment workflows, AI tools"
+      "text": "TypeScript | Figma | Responsive Design | i18n & RTL | REST API | SQL | Git | AI-Assisted Development"
     },
     "body1": "Based in Tehran, Iran — fully fluent in English (written and spoken).",
-    "body2": "I'm looking for a team where I can apply what I already know, learn from experienced engineers, and contribute to products that solve real problems.",
-    "body3": "If you'd like to discuss an opportunity or collaborate, feel free to get in touch.",
+    "body2": "Currently seeking opportunities to build real products, solve meaningful problems, and grow alongside experienced engineers.",
     "myStory": {
       "button": "My Story",
       "1": "I was 25 when I became a teacher, driven by a genuine desire to make an impact. Shortly after, I confronted a hard truth:",

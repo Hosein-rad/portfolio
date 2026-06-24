@@ -14,7 +14,7 @@ const Home = () => {
       <HeroHighlight></HeroHighlight>
 
       {/* Hero - title */}
-      <div className="w-full mt-7 md:mt-20 mb-10 md:mb-15 h-[13em] text-black dark:text-white flex flex-col items-center justify-center duration-300">
+      <div className="w-full md:mt-30 mb-10 md:mb-15 h-[13em] text-black dark:text-white flex flex-col items-center justify-center duration-300">
         <div className="flex">
           <div className="h-40 md:text-5xl flex items-center justify-center">
             {t("hero.title.preTitle")}
@@ -23,7 +23,7 @@ const Home = () => {
             <p className="-mx-15 -mb-15 md:-mb-8 h-50 flex items-center justify-center text-7xl lg:text-9xl">
               <CanvasText
                 text={t("hero.title.title")}
-                backgroundClassName="bg-blue-600"
+                backgroundClassName="bg-blue-400 dark:bg-blue-600"
                 colors={[
                   "rgba(250, 50, 250, 1)",
                   "rgba(50, 250, 150, 0.9)",
@@ -36,8 +36,8 @@ const Home = () => {
                   "rgba(200, 0, 200, 0.2)",
                   "rgba(250, 250, 200, 0.1)",
                 ]}
-                lineGap={5}
-                animationDuration={10}
+                lineGap={4}
+                animationDuration={8}
               />
             </p>
             {/* </motion.h1> */}

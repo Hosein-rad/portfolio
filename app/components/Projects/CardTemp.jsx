@@ -44,7 +44,7 @@ const CardTemp = ({ card, setActive, id }) => {
           href={card.ctaLink}
           target={card.ctaLink === "#" ? "" : "_blank"}
           layoutId={`button-${card.title}-${id}`}
-          className="flex items-center justify-center rounded-full bg-white size-10 hover:bg-sky-600 hover:text-white text-black mt-4 md:mt-0 duration-200 cursor-pointer shrink-0 group"
+          className="flex items-center justify-center rounded-full bg-blue-100 dark:bg-white size-10 hover:bg-sky-600 hover:text-white text-black mt-4 md:mt-0 duration-200 cursor-pointer shrink-0 group"
         >
           {card.ctaText}
         </motion.a>
@@ -53,7 +53,7 @@ const CardTemp = ({ card, setActive, id }) => {
             href={card.ctaLink2}
             target={card.ctaLink2 === "#" ? "" : "_blank"}
             layoutId={`button-${card.title}-${id}-2`}
-            className="flex items-center justify-center rounded-full bg-white size-10 hover:bg-sky-600 hover:text-white text-black mt-4 md:mt-0 duration-200 cursor-pointer shrink-0 group"
+            className="flex items-center justify-center rounded-full bg-blue-100 dark:bg-white size-10 hover:bg-sky-600 hover:text-white text-black mt-4 md:mt-0 duration-200 cursor-pointer shrink-0 group"
           >
             {card.cta2Text}
           </motion.a>

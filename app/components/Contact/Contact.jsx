@@ -25,8 +25,8 @@ const Contact = () => {
             {t("contact.subtitle.2")}
           </h3>
 
-          {/* Email to copy section */}
-          <div className="my-5 w-full flex items-center justify-between rounded-full bg-gray-400 dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 duration-300">
+          {/* Email to copy */}
+          <div className="my-5 w-full flex items-center justify-between rounded-full bg-sky-200 dark:bg-gray-900 hover:bg-sky-100 dark:hover:bg-gray-800 duration-300">
             <div className="flex items-center w-fit">
               <svg
                 width={40}
@@ -91,7 +91,7 @@ const Contact = () => {
             </a>
             {/* LinkedIn Icon and Link */}
             <a
-              href="https://www.linkedin.com/in/hosein-rad-15a149419"
+              href="https://www.linkedin.com/in/hosein-dev"
               target="_blank"
               rel="noopener noreferrer"
             >

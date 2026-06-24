@@ -161,15 +161,14 @@ const About = () => {
         </div>
 
         {/* Short introduction section */}
-        <div className="md:w-[70%] mt-3 px-2 md:mt-14 md:text-xl duration-500">
+        <div className="md:w-[70%] mt-3 md:mt-20 px-2 md:text-xl duration-500 leading-relaxed">
           <p>
             <b>{t("about.stack1.title")}</b>: {t("about.stack1.text")}
             <br />
             <b>{t("about.stack2.title")}</b>: {t("about.stack2.text")}
           </p>
-          <p className="my-2">{t("about.body1")}</p>
-          <p className="indent-3">{t("about.body2")}</p>
-          <p className="my-2">{t("about.body3")}</p>
+          <p className="my-2">• {t("about.body1")}</p>
+          <p className="">• {t("about.body2")}</p>
         </div>
       </div>
     </div>
