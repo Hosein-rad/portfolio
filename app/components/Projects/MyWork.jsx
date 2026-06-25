@@ -15,6 +15,9 @@ export default function MyWork() {
   const ref = useRef(null);
   const id = useId();
 
+  const gridItemsStyle =
+    "lg:h-40 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl overflow-hidden";
+
   useEffect(() => {
     function onKeyDown(event) {
       if (event.key === "Escape") {
@@ -147,24 +150,24 @@ export default function MyWork() {
       {/* grid layout */}
       <div className="flex flex-col gap-4 w-full md:w-4/5 min-h-40 px-3 sm:px-20">
         {/* 1st row */}
-        <div className="self-center lg:w-9/10 hover:w-full lg:h-40 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl overflow-hidden">
+        <div className={`self-center lg:w-9/10 hover:w-full ${gridItemsStyle}`}>
           <CardTemp card={cards[0]} setActive={setActive} id={id} />
         </div>
         {/* 2nd row */}
         <div className="flex flex-col lg:flex-row gap-4">
-          <div className="lg:h-40 flex-5 hover:flex-6 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl overflow-hidden">
+          <div className={`flex-5 hover:flex-6 ${gridItemsStyle}`}>
             <CardTemp card={cards[1]} setActive={setActive} id={id} />
           </div>
-          <div className="lg:h-40 flex-4 hover:flex-5 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl overflow-hidden">
+          <div className={`flex-4 hover:flex-5 ${gridItemsStyle}`}>
             <CardTemp card={cards[2]} setActive={setActive} id={id} />
           </div>
         </div>
         {/* 3rd row */}
         <div className="flex flex-col lg:flex-row gap-4">
-          <div className="lg:h-40 flex-4 hover:flex-5 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl overflow-hidden ">
+          <div className={`flex-4 hover:flex-5 ${gridItemsStyle}`}>
             <CardTemp card={cards[3]} setActive={setActive} id={id} />
           </div>
-          <div className="lg:h-40 flex-5 hover:flex-6 backdrop-brightness-150 dark:backdrop-brightness-25 border-3 border-black/50 dark:border-sky-300/50 rounded-2xl hover:bg-neutral-300 dark:hover:bg-neutral-800 duration-300 text-xl overflow-hidden ">
+          <div className={`flex-5 hover:flex-6 ${gridItemsStyle}`}>
             <CardTemp card={cards[4]} setActive={setActive} id={id} />
           </div>
         </div>

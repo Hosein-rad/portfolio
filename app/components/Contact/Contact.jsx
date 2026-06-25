@@ -17,7 +17,7 @@ const Contact = () => {
       </h1>
 
       {/* div containing form and links */}
-      <div className="w-fit lg:p-10 flex flex-col-reverse lg:flex-row">
+      <div className="w-fit lg:p-10 flex flex-col-reverse lg:flex-row overflow-clip">
         {/* section with links and header */}
         <div className="p-5 mb-10 flex flex-col items-center justify-start">
           <h3 className="my-3 md:my-7 text-center text-2xl md:text-4xl text-nowrap">

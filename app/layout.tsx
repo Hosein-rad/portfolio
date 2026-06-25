@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-hidden">
+    <html lang="en" className="scroll-hidden overflow-x-hidden">
       <head>
         <script
           dangerouslySetInnerHTML={{

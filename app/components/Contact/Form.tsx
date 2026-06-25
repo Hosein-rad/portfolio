@@ -47,7 +47,7 @@ export default function Form() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="relative p-2 md:m-10 flex mx-auto w-70 md:w-100 max-w-100 flex-col justify-center items-center text-sm md:text-lg text-black dark:text-white rounded-3xl bg-gray-200 dark:bg-gray-950/80"
+      className="relative p-2 md:m-10 flex mx-auto w-70 md:w-100 max-w-100 flex-col justify-center items-center text-sm md:text-lg text-black dark:text-white rounded-3xl bg-gray-200 dark:bg-gray-950/80 overflow-clip"
     >
       <input
         id="name"
